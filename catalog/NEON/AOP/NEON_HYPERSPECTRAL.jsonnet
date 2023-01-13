@@ -3659,38 +3659,47 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 			value: 13,
 			color: 'ceddde',
 			description: 'thin haze/glint (water)',
+		  },
 		  {
 			value: 14,
 			color: '849596',
 			description: 'med. haze/glint (water)',
+		  },
 		  {
 			value: 15,
 			color: '98a39b',
 			description: 'cloud (land)',
+		  },
 		  {
 			value: 16,
 			color: '9899a3',
 			description: 'cloud (water)',
+		  },
 		  {
 			value: 17,
 			color: '135e9c',
 			description: 'water',
-		  {
+		  },		  
+          {
 			value: 18,
 			color: 'e1e8ed',
 			description: 'cirrus cloud',
+		  },
 		  {
 			value: 19,
 			color: '9ea7ad',
 			description: 'cirrus cloud (thick)',
+		  },
 		  {
 			value: 20,
 			color: 'dffa11',
 			description: 'bright',
+		  },
 		  {
 			value: 21,
 			color: '383734',
 			description: 'topographic shadow',
+		  },
 		  {
 			value: 22,
 			color: '4f4f4e',
