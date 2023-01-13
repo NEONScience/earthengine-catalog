@@ -3559,27 +3559,27 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       'gee:classes': [
               {
                 value: 0,
-                color: 'ff0004',
+                color: '0a0a0a',
                 description: 'geocoded background',
               },
               {
                 value: 1,
-                color: 'ff0004',
+                color: '135e9c',
                 description: 'water',
               },
               {
                 value: 2,
-                color: 'ff0004',
+                color: '063d08',
                 description: 'DDV reference',
               },
              {
                 value: 3,
-                color: 'ff0004',
+                color: 'e1e3e1',
                 description: 'non-reference',
               },
              {
                 value: 4,
-                color: 'ff0004',
+                color: '383734',
                 description: 'topographic shadow',
               },
       ],
@@ -3590,16 +3590,112 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	  scale: 1.0,
 	  description:'Haze Cloud Water Map generate by ATCOR',
       'gee:classes': [
-              {
-                value: 0,
-                color: 'ff0004',
-                description: 'geocoded background',
-              },
-              {
-                value: 1,
-                color: 'ff0004',
-                description: 'shadow',
-              },
+		  {
+			value: 0,
+			color: '000000',
+			description: 'geocoded background',
+		  },
+		  {
+			value: 1,
+			color: '474747',
+			description: 'shadow',
+		  },
+		  {
+			value: 2,
+			color: '9db8d1',
+			description: 'thin cirrus (water)',
+		  },
+		  {
+			value: 3,
+			color: '5a6978',
+			description: 'medium cirrus (water)',
+		  },
+		  {
+			value: 4,
+			color: '3d4a57',
+			description: 'thick cirrus (water)',
+		  },
+		  {
+			value: 5,
+			color: '5d7554',
+			description: 'land (clear)',
+		  },
+		  {
+			value: 6,
+			color: '454d42',
+			description: 'saturated',
+		  },
+		  {
+			value: 7,
+			color: 'f7f7f7',
+			description: 'snow/ice',
+		  },
+		  {
+			value: 8,
+			color: 'd5e3d3',
+			description: 'thin cirrus (land)',
+		  },
+		  {
+			value: 9,
+			color: '9da89b',
+			description: 'medium cirrus (land)',
+		  },
+		  {
+			value: 10,
+			color: '5a6359',
+			description: 'thick cirrus (land)',
+		  },
+		  {
+			value: 11,
+			color: 'ced4cd',
+			description: 'thin haze (land)',
+		  },
+		  {
+			value: 12,
+			color: '8c918c',
+			description: 'medium haze (land)',
+		  },
+		  {
+			value: 13,
+			color: 'ceddde',
+			description: 'thin haze/glint (water)',
+		  {
+			value: 14,
+			color: '849596',
+			description: 'med. haze/glint (water)',
+		  {
+			value: 15,
+			color: '98a39b',
+			description: 'cloud (land)',
+		  {
+			value: 16,
+			color: '9899a3',
+			description: 'cloud (water)',
+		  {
+			value: 17,
+			color: '135e9c',
+			description: 'water',
+		  {
+			value: 18,
+			color: 'e1e8ed',
+			description: 'cirrus cloud',
+		  {
+			value: 19,
+			color: '9ea7ad',
+			description: 'cirrus cloud (thick)',
+		  {
+			value: 20,
+			color: 'dffa11',
+			description: 'bright',
+		  {
+			value: 21,
+			color: '383734',
+			description: 'topographic shadow',
+		  {
+			value: 22,
+			color: '4f4f4e',
+			description: 'cloud (building) shadow',
+		  },
       ]
 	 },
 	 {
@@ -3662,13 +3758,18 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         'gee:classes': [
             {
             value: 0,
-            color: 'ff0004',
-            description: 'geocoded background',
+            color: '239e2f',
+            description: 'mostly clear: <10% cloud cover',
             },
             {
             value: 1,
-            color: 'ff0004',
-            description: 'shadow',
+            color: 'f5ee1d',
+            description: 'partly cloudy: 10-50% cloud cover',
+            },
+            {
+            value: 2,
+            color: 'c40a0a',
+            description: 'mostly cloudy: >50% cloud cover',
             },
       ],
 	  description:'Weather Quality Indicator - estimated percentage of overhead cloud cover during acquisition'
