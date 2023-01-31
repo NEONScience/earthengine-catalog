@@ -43,14 +43,14 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   license: license.id,
   links: ee.standardLinks(subdir, id),
   keywords: [
-    'neon',
-    'reflectance',
-    'hyperspectral',
     'airborne',
-	'ecology'
+    'ecology',
+    'hyperspectral',
+    'neon',
+    'reflectance'
   ],
   providers: [
-    ee.producer_provider('NEON', 'www.neonscience.org'),
+    ee.producer_provider('NEON', 'https://www.neonscience.org/'),
     ee.host_provider(self_ee_catalog_url),
   ],
   extent: ee.extent_global('2013-01-01T00:00:00Z', '2023-01-01T00:00:00Z'),
