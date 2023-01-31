@@ -16,14 +16,13 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   type: ee_const.stac_type.collection,
   stac_extensions: [
     ee_const.ext_eo,
-    ee_const.ext_sci,
+    ee_const.ext_sci
   ],
   id: id,
   title: 'NASA-USDA Enhanced SMAP Global Soil Moisture Data',
   'gee:type': ee_const.gee_type.image_collection,
   description: |||
-    Data production is temporarily interrupted due to upstream source
-    problems. Production is expected to resume in 2023.
+    This dataset is being superseded by [SPL4SMGP.007](NASA_SMAP_SPL4SMGP_007)
 
     The NASA-USDA Enhanced SMAP Global soil moisture data provides soil moisture information across
     the globe at 10-km spatial resolution. This dataset includes:
