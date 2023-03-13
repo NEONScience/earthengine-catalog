@@ -1,4 +1,4 @@
-local id = 'NEON/AOP/HYPERSPECTRAL';
+local id = 'NEON/HYPERSPECTRAL';
 local subdir = 'NEON';
 
 local ee_const = import 'earthengine_const.libsonnet';
@@ -67,13 +67,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         type: ee_const.var_type.string,
       },
       {
-        name: 'NEON_DATA_PRODUCT_ID',
-        description: 'The unique identifier of the NEON data product, in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
-        type: ee_const.var_type.string,
-      },
-      {
-        name: 'CALIBRATION_CUBE',
-        description: 'Name of calibration cube used in processing',
+        name: 'NEON_DATA_URL',
+        description: 'The data product page url, including the unique identifier of the NEON data product, in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
