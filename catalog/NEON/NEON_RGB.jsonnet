@@ -1,4 +1,4 @@
-local id = 'NEON/CHM';
+local id = 'NEON/RGB';
 local subdir = 'NEON';
 
 local ee_const = import 'earthengine_const.libsonnet';
@@ -35,7 +35,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	Since the digital camera imagery is acquired at higher spatial resolution 
 	than the imaging spectrometer data, it can aid in identifying features in 
 	the spectrometer images including manmade features (e.g., roads, fence 
-	lines, and buildings) that are indicative of land-use change. 
+	lines, and buildings) that are indicative of land-use change. See 
+	https://data.neonscience.org/data-products/DP3.30010.001 for more details.
 	Citation
 	Please use the appropriate citation(s) in your publications. 
 	See Data Policies & Citation Guidelines for more info.
@@ -56,37 +57,37 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'gee:schema': [
       {
         name: 'AOP_VISIT_NUMBER',
-        description: 'unique visit number to the NEON site, typically AOP flies each site three out of every four years',
+        description: 'Unique visit number to the NEON site, typically AOP flies each site three out of every four years',
         type: ee_const.var_type.string,
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
+        description: 'Year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'three-digit NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'Three-digit NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'four-letter NEON site code; See https://www.neonscience.org/field-sites)',
+        description: 'Four-letter NEON site code; See https://www.neonscience.org/field-sites)',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_ID',
-        description: 'The NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
+        description: 'NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_URL',
-        description: 'The NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
+        description: 'NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
         type: ee_const.var_type.string,
       },
 	  {
         name: 'PRODUCT_TYPE',
-        description: 'acronym of the NEON data producty type; SDR = Surface Directional Reflectance',
+        description: 'Acronym of the NEON data product type; RGB = Red Green Blue Camera',
         type: ee_const.var_type.double,
       },
       {

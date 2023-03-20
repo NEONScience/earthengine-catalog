@@ -22,20 +22,21 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   title: 'NEON Imaging Spectrometer',
   'gee:type': ee_const.gee_type.image_collection,
   description: |||
-	Orthorectified surface reflectance (0-1 unitless, scaled by 10,000) 
-	computed from the NEON Imaging Spectrometer (NIS) per pixel; data 
-	are orthorectified and output onto a fixed, uniform spatial grid 
-	using nearest-neighbor resampling (tbr). Level 1 flight lines over 
-	a given site are mosaicked into 1 km by 1 km tiles with a spatial 
-	resolution of 1m.
-	Data are calibrated and atmospherically corrected product 
-	distributed as scaled reflectance. It includes QA and ancillary 
-	rasters used as inputs to ATCOR for atmospheric correction as well 
-	as outputs from ATCOR for diagnostic purposes. L3 reflectance is 
-	distributed in 1 km by 1 km tiles with one HDF5 file per tile 
-	including the reflectance data and all metadata and ancillary data. 
-	The mosaic is created using the most-nadir pixels from the flight 
-	lines observed with the least cloud cover. 
+	Orthorectified surface directional reflectance (0-1 unitless, scaled by 10000) 
+	computed from the NEON Imaging Spectrometer (NIS), an AVIRIS-NG sensor built by JPL. 
+	Hyperspectral dataset spanning wavelengths between 380 nm and 2510 nm. Wavelengths 
+	between 1340-1445nm and 1790-1955nm are set to -100 (scaled); these are water vapor 
+	absorption bands and do not have valid values. All 426 bands are orthorectified 
+	and output onto a fixed, uniform spatial grid using nearest-neighbor resampling. 
+	No BRDF-correction has been applied. Flight lines over a given site are mosaicked 
+	into a single product; spatial resolution is 1m, spectral resolution is ~5nm. The 
+	mosaic is created using the nadir-most pixels from the flight lines, and data 
+	acquired during the best weather conditions, when possible. Data are calibrated 
+	and atmospherically corrected, product distributed as scaled reflectance, and 
+	include QA and ancillary bands, comprising of inputs to ATCOR for atmospheric 
+	correction, outputs from ATCOR for diagnostic purposes, weather quality information, 
+	acquisition date, and more. See 
+	https://data.neonscience.org/data-products/DP3.30006.001 for more details.
 	Citation
 	Please use the appropriate citation(s) in your publications. 
 	See Data Policies & Citation Guidelines for more info.
@@ -88,7 +89,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
 	  {
         name: 'PRODUCT_TYPE',
-        description: 'acronym of the NEON data producty type; SDR = Surface Directional Reflectance',
+        description: 'acronym of the NEON data product type; SDR = Surface Directional Reflectance',
         type: ee_const.var_type.double,
       },
       {

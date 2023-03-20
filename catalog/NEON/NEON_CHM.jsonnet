@@ -33,7 +33,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	surface is then generated using the height normalized vegetation points 
 	to produce the CHM. Any canopy heights less than 2m are set to zero for 
 	data collected with the Optech Gemini LiDAR sensors, and less than 2/3m 
-	for the Riegl and Optech Galaxy sensors.
+	for the Riegl and Optech Galaxy sensors. See 
+	https://data.neonscience.org/data-products/DP3.30015.001 for more details.
 	Citation
 	Please use the appropriate citation(s) in your publications. 
 	See Data Policies & Citation Guidelines for more info.
@@ -84,17 +85,17 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
 	  {
         name: 'PRODUCT_TYPE',
-        description: 'Acronym of the NEON data producty type; CHM = Canopy Height Model',
+        description: 'Acronym of the NEON data product type; CHM = Canopy Height Model',
         type: ee_const.var_type.double,
       },
       {
         name: 'SENSOR_NAME',
-        description: 'Make and model of the camera sensor: "Phase One iXM-RS150F"',
+        description: 'Make and model of the lidar sensor: "Optech Galaxy Prime","Optech Gemini","Riegl Q780"',
         type: ee_const.var_type.double,
       },
       {
         name: 'SENSOR_SERIAL',
-        description: 'Serial number of the camera sensor: "MM010175"',
+        description: 'Serial number of the lidar sensor: "12SEN311","11SEN287","5060445","220855"',
         type: ee_const.var_type.double,
       },
       {
