@@ -5,4 +5,4 @@ var dataset = ee.ImageCollection("projects/neon-nonprod-earthengine/assets/DP3-3
 var rgb = dataset.select(['B053', 'B035', 'B019']);
 var rgbVis = {min: 103, max: 1160, gamma: 1.3};
 Map.setCenter(-122.154, 44.268, 14);
-Map.addLayer(rgb, rgbVis, 'Spectrometer Directional Reflectance RGB');
+Map.addLayer(rgb, rgbVis, 'AOP Surface Directional Reflectance RGB');
