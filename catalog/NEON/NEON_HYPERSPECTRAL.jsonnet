@@ -57,6 +57,16 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   summaries: {
     'gee:schema': [
       {
+        name: 'AOP_VISIT_NUMBER',
+        description: 'unique visit number to the NEON site, typically AOP flies each site three out of every four years',
+        type: ee_const.var_type.string,
+      },     
+      {
+        name: 'FLIGHT_YEAR',
+        description: 'year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
+        type: ee_const.var_type.string,
+      },  
+      {
         name: 'NEON_DOMAIN',
         description: 'three-digit NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
@@ -68,30 +78,37 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
       {
         name: 'NEON_DATA_URL',
-        description: 'The data product page url, including the unique identifier of the NEON data product, in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
+        description: 'The NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
-        name: 'SENSOR_ID',
-        description: 'ID of NEON Imaging Spectrometer: "NIS1", "NIS2", "NIS3", "CAO", or "GAO"',
-        type: ee_const.var_type.double,
+        name: 'NEON_DPID',
+        description: 'The NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
+        type: ee_const.var_type.string,
       },
 	  {
-        name: 'PAYLOAD_CAMPAIGN_ID',
-        description: 'ID of NEON Payload and Campaign: "P1C1", P2C1", "P3C1"',
+        name: 'PRODUCT_TYPE',
+        description: 'acronym of the NEON data producty type; SDR = Surface Directional Reflectance',
+        type: ee_const.var_type.double,
+      },
+      {
+        name: 'SCALING_FACTOR',
+        description: 'reflectance scaling factor',
+        type: ee_const.var_type.double,
+      },
+      {
+        name: 'SENSOR_NAME',
+        description: 'Make and model of the hyperspectral sensor; all NEON spectrometers are Jet Propulsion Lab (JPL) AVIRIS-NG sensors',
+        type: ee_const.var_type.double,
+      },
+      {
+        name: 'SENSOR_NUMBER',
+        description: 'Number of the NEON Imaging Spectrometer, corresponding to the payload flown: "NIS1", "NIS2", "NIS3", "CAO", or "GAO"',
         type: ee_const.var_type.double,
       },
       {
         name: 'RELEASE_TAG',
         description: 'NEON Release Tag of data; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
-        type: ee_const.var_type.string,
-      },
-      {
-        name: 'ELEVATION_SOURCE',
-        description: |||
-          Indicates the primary source of Digital Elevation Model (DEM)
-          used in the correction process: "AIGDSM","USGSDEM"
-        |||,
         type: ee_const.var_type.string,
       },
       {
@@ -105,24 +122,19 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         type: ee_const.var_type.double,
       },
       {
-        name: 'SCALING_FACTOR',
-        description: 'Reflectance scaling factor used',
-        type: ee_const.var_type.double,
-      },
-      {
         name: 'BRDF_CORRECTION',
         description: 'Indicator of whether image was corrected with bidirectional distribution function: "Y" or "N"',
         type: ee_const.var_type.string,
       },
     ],
 	gsd: [
-      30.0,
+      1.0,
     ],
     platform: [
       'NEON',
     ],
     instruments: [
-      'NIS1, NIS2, NIS3, GAO',
+      'AVIRIS-NG',
     ],
     'eo:bands': [
 	 {
