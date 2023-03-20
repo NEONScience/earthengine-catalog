@@ -1,10 +1,10 @@
-local id = 'NEON/AOP';
+local id = 'NEON';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 
 local basename = 'catalog';
 local base_filename = basename + '.json';
-local base_url = ee_const.catalog_base + 'NEON/AOP/';
+local base_url = ee_const.catalog_base + 'NEON/';
 local parent_url = ee_const.catalog_base + 'catalog.json';
 local self_url = base_url + base_filename;
 
@@ -18,6 +18,6 @@ local self_url = base_url + base_filename;
     ee.link.root(),
     ee.link.parent(parent_url),
     ee.link.self_link(self_url),
-    ee.link.child_collection('HYPERSPECTRAL', base_url),
+    ee.link.child_collection('NEON_HYPERSPECTRAL', base_url),
   ],
 }
