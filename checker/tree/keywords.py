@@ -37,7 +37,7 @@ EXCEPTIONS = frozenset({
     'ges_disc', 'gfd', 'gfs', 'gimms', 'glad', 'glas',
     'globalsoilmap', 'globcover', 'goddard', 'grsg', 'gtopo30', 'habitats',
     'half_hourly', 'hapludalfs', 'health', 'human', 'hydroatlas', 'hyperion',
-    'hyperspectral', 'igbp', 'impervious', 'infrastructure', 'inundation',
+    'igbp', 'impervious', 'infrastructure', 'inundation',
     'iran', 'iron', 'irrigated_land', 'isccp', 'isothermality', 'kbdi', 'kntu',
     'label', 'lance', 'landscan', 'landscape', 'lst_derived', 'lt8',
     'magnesium', 'maiac', 'mask', 'mavi',
