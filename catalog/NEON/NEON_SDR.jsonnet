@@ -23,23 +23,16 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'gee:type': ee_const.gee_type.image_collection,
   description: |||
 	Orthorectified surface directional reflectance (0-1 unitless, scaled by 10000) 
-	computed from the NEON Imaging Spectrometer (NIS), an AVIRIS-NG sensor built by JPL. 
-	Hyperspectral dataset spanning wavelengths between 380 nm and 2510 nm. Wavelengths 
-	between 1340-1445nm and 1790-1955nm are set to -100 (scaled); these are water vapor 
-	absorption bands and do not have valid values. All 426 bands are orthorectified 
-	and output onto a fixed, uniform spatial grid using nearest-neighbor resampling. 
-	No BRDF-correction has been applied. Flight lines over a given site are mosaicked 
-	into a single product; spatial resolution is 1m, spectral resolution is ~5nm. The 
-	mosaic is created using the nadir-most pixels from the flight lines, and data 
-	acquired during the best weather conditions, when possible. Data are calibrated 
-	and atmospherically corrected, product distributed as scaled reflectance, and 
-	include QA and ancillary bands, comprising of inputs to ATCOR for atmospheric 
-	correction, outputs from ATCOR for diagnostic purposes, weather quality information, 
-	acquisition date, and more. See 
-	https://data.neonscience.org/data-products/DP3.30006.001 for more details.
-	Citation
-	Please use the appropriate citation(s) in your publications. 
-	See Data Policies & Citation Guidelines for more info.
+	computed from one of three NEON Imaging Spectrometer (NIS) units, AVIRIS-NG sensors built by JPL. 
+	This is a hyperspectral dataset containing 426 bands spanning wavelengths from 380 nm to 2510 nm; 
+	wavelengths between 1340-1445nm and 1790-1955nm are set to -100; these are water vapor 
+	absorption bands without valid values. Spatial resolution is 1m, spectral resolution is ~5nm. 
+	A Bidirectional Reflectance Distribution Function (BRDF) correction has not been applied. 
+	Flight lines over a given site are mosaicked using the highest quality cloud
+	conditions and closest proximity to nadir. Data are calibrated and atmospherically corrected, and include QA 
+	and ancillary bands, comprising of inputs and outputs to/from Atmospheric & Topographic Correction (ATCOR), 
+	weather quality information, and the acquisition date; see the "Bands" tab for more detailed information. 
+	Documentation: [NEON DP3.30006.001 Quick Start Guide](https://data.neonscience.org/api/v0/documents/quick-start-guides/NEON.QSG.DP3.30006.001v1?inline=true&fallback=html)
   |||,
   license: license.id,
   links: ee.standardLinks(subdir, id),
@@ -59,57 +52,57 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'gee:schema': [
       {
         name: 'AOP_VISIT_NUMBER',
-        description: 'unique visit number to the NEON site, typically AOP flies each site three out of every four years',
+        description: 'Unique visit number to the NEON site, typically AOP flies each site three out of every four years',
         type: ee_const.var_type.string,
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
+        description: 'Year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'three-digit NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'four-letter NEON site code; See https://www.neonscience.org/field-sites)',
+        description: 'NEON site code; See https://www.neonscience.org/field-sites',
         type: ee_const.var_type.string,
       },
       {
-        name: 'NEON_DATA_ID',
-        description: 'The NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
+        name: 'NEON_DATA_PROD_ID',
+        description: 'NEON data product identification code (ID), in the form DPL.PRNUM.REV, where DPL = Data Product Level, PRNUM = Product Number, and REV = Revision, e.g. "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
-        name: 'NEON_DATA_URL',
-        description: 'The NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
+        name: 'NEON_DATA_PROD_URL',
+        description: 'NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
         type: ee_const.var_type.string,
       },
 	  {
         name: 'PRODUCT_TYPE',
-        description: 'acronym of the NEON data product type; SDR = Surface Directional Reflectance',
-        type: ee_const.var_type.double,
+        description: 'Acronym of the NEON data product type; SDR = Surface Directional Reflectance',
+        type: ee_const.var_type.string,
       },
       {
         name: 'SCALING_FACTOR',
-        description: 'reflectance scaling factor',
-        type: ee_const.var_type.double,
+        description: 'Reflectance scaling factor',
+        type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_NAME',
         description: 'Make and model of the hyperspectral sensor; all NEON spectrometers are Jet Propulsion Lab (JPL) AVIRIS-NG sensors',
-        type: ee_const.var_type.double,
+        type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_NUMBER',
-        description: 'Number of the NEON Imaging Spectrometer, corresponding to the payload flown: "NIS1", "NIS2", "NIS3", "CAO", or "GAO"',
-        type: ee_const.var_type.double,
+        description: 'Number of the NEON Imaging Spectrometer (NIS), corresponding to the payload flown: "NIS1", "NIS2", "NIS3", "CAO" (Carnegie Airborne Observatory), or "GAO" (Global Airborne Observatory)',
+        type: ee_const.var_type.string,
       },
       {
         name: 'RELEASE_TAG',
-        description: 'NEON Release Tag of data; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
+        description: 'NEON Release Tag; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
         type: ee_const.var_type.string,
       },
       {
@@ -121,11 +114,6 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         name: 'PRODUCT_CREATION_TIME',
         description: 'Date and time when NEON L3 reflectance h5 dataset was created',
         type: ee_const.var_type.double,
-      },
-      {
-        name: 'BRDF_CORRECTION',
-        description: 'Indicator of whether image was corrected with bidirectional distribution function: "Y" or "N"',
-        type: ee_const.var_type.string,
       },
     ],
 	gsd: [
@@ -3814,14 +3802,13 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
     ],
   },
-  'sci:citation': 'Data available from the National Ecological Observatory Network (data.neonscience.org)',
+  'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30006.001',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
 	exception of data related to rare, threatened, or endangered (RTE) 
 	species, are released to the “public domain” under Creative Commons 
-	CC0 1.0 “No Rights Reserved” 
-	(https://creativecommons.org/publicdomain/zero/1.0/). No copyright 
-	has been applied to NEON data; any person may copy, modify, or 
+	CC0 1.0 “No Rights Reserved” (https://creativecommons.org/publicdomain/zero/1.0/). 
+	No copyright has been applied to NEON data; any person may copy, modify, or 
 	distribute the data, for commercial or non-commercial purposes, 
 	without asking for permission. NEON data may still be subject to 
 	other laws or rights such as for privacy, and NEON makes no warranties 
@@ -3829,5 +3816,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	data, no implication should be made about endorsement by NEON. Please 
 	refer to https://www.neonscience.org/data-samples/data-policies-citation 
 	for detailed information on how to properly cite NEON data.
+	In most countries, data and facts are not copyrightable. By putting NEON data into the public domain, we encourage broad use, particularly in scientific analyses and data aggregations. However, please be mindful of the following scholarly norms:
+	NEON data should be used in a way that is mindful of the limitations of the data, using the documentation associated with the data packages as a guide. Unlike most scientific data, NEON data is not associated with individual authors; rather, the ‘author’ of data produced by the Observatory is NEON itself. 
+	Attributions and citations should be made to NEON for any use of the data.
   |||,
 }

@@ -34,16 +34,16 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	to produce the CHM. Any canopy heights less than 2m are set to zero for 
 	data collected with the Optech Gemini LiDAR sensors, and less than 2/3m 
 	for the Riegl and Optech Galaxy sensors. See 
-	https://data.neonscience.org/data-products/DP3.30015.001 for more details.
-	Citation
-	Please use the appropriate citation(s) in your publications. 
-	See Data Policies & Citation Guidelines for more info.
+	[NEON Data Product DP3.30015.001](https://data.neonscience.org/data-products/DP3.30015.001) for more details.
+	Citation: Please use the appropriate citation(s) in your publications; see Terms of Use for more info.
+	Documentation: [NEON DP3.30015.001 Quick Start Guide](https://data.neonscience.org/api/v0/documents/quick-start-guides/NEON.QSG.DP3.30015.001v1?inline=true&fallback=html)
   |||,
   license: license.id,
   links: ee.standardLinks(subdir, id),
   keywords: [
     'airborne',
     'ecology',
+    'lidar',
     'neon',
   ],
   providers: [
@@ -60,47 +60,47 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'Year the data were collected, typically AOP flies each site three out of every four years',
+        description: 'Year the data were collected',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'Three-digit NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'Four-letter NEON site code; See https://www.neonscience.org/field-sites)',
+        description: 'NEON site code; See https://www.neonscience.org/field-sites)',
         type: ee_const.var_type.string,
       },
       {
-        name: 'NEON_DATA_ID',
+        name: 'NEON_DATA_PROD_ID',
         description: 'NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
-        name: 'NEON_DATA_URL',
+        name: 'NEON_DATA_PROD_URL',
         description: 'NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
         type: ee_const.var_type.string,
       },
 	  {
         name: 'PRODUCT_TYPE',
         description: 'Acronym of the NEON data product type; CHM = Canopy Height Model',
-        type: ee_const.var_type.double,
+        type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_NAME',
         description: 'Make and model of the lidar sensor: "Optech Galaxy Prime","Optech Gemini","Riegl Q780"',
-        type: ee_const.var_type.double,
+        type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_SERIAL',
         description: 'Serial number of the lidar sensor: "12SEN311","11SEN287","5060445","220855"',
-        type: ee_const.var_type.double,
+        type: ee_const.var_type.string,
       },
       {
         name: 'RELEASE_TAG',
-        description: 'NEON Release Tag of data; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
+        description: 'NEON Release Tag; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
         type: ee_const.var_type.string,
       },
       {
@@ -152,14 +152,13 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
     ],
   },
-  'sci:citation': 'Data available from the National Ecological Observatory Network (data.neonscience.org)',
+  'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30015.001',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
 	exception of data related to rare, threatened, or endangered (RTE) 
 	species, are released to the “public domain” under Creative Commons 
-	CC0 1.0 “No Rights Reserved” 
-	(https://creativecommons.org/publicdomain/zero/1.0/). No copyright 
-	has been applied to NEON data; any person may copy, modify, or 
+	CC0 1.0 “No Rights Reserved” (https://creativecommons.org/publicdomain/zero/1.0/). 
+	No copyright has been applied to NEON data; any person may copy, modify, or 
 	distribute the data, for commercial or non-commercial purposes, 
 	without asking for permission. NEON data may still be subject to 
 	other laws or rights such as for privacy, and NEON makes no warranties 
@@ -167,5 +166,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	data, no implication should be made about endorsement by NEON. Please 
 	refer to https://www.neonscience.org/data-samples/data-policies-citation 
 	for detailed information on how to properly cite NEON data.
+	In most countries, data and facts are not copyrightable. By putting NEON data into the public domain, we encourage broad use, particularly in scientific analyses and data aggregations. However, please be mindful of the following scholarly norms:
+	NEON data should be used in a way that is mindful of the limitations of the data, using the documentation associated with the data packages as a guide. Unlike most scientific data, NEON data is not associated with individual authors; rather, the ‘author’ of data produced by the Observatory is NEON itself. 
+	Attributions and citations should be made to NEON for any use of the data.
   |||,
 }
