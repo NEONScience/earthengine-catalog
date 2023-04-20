@@ -3805,19 +3805,20 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30006.001',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
-	exception of data related to rare, threatened, or endangered (RTE) 
-	species, are released to the “public domain” under Creative Commons 
-	CC0 1.0 “No Rights Reserved” (https://creativecommons.org/publicdomain/zero/1.0/). 
-	No copyright has been applied to NEON data; any person may copy, modify, or 
-	distribute the data, for commercial or non-commercial purposes, 
-	without asking for permission. NEON data may still be subject to 
-	other laws or rights such as for privacy, and NEON makes no warranties 
-	about the data and disclaims all liability.  When using or citing NEON 
-	data, no implication should be made about endorsement by NEON. Please 
-	refer to https://www.neonscience.org/data-samples/data-policies-citation 
-	for detailed information on how to properly cite NEON data.
-	In most countries, data and facts are not copyrightable. By putting NEON data into the public domain, we encourage broad use, particularly in scientific analyses and data aggregations. However, please be mindful of the following scholarly norms:
-	NEON data should be used in a way that is mindful of the limitations of the data, using the documentation associated with the data packages as a guide. Unlike most scientific data, NEON data is not associated with individual authors; rather, the ‘author’ of data produced by the Observatory is NEON itself. 
-	Attributions and citations should be made to NEON for any use of the data.
+	exception of data related to rare, threatened, or endangered (RTE) species, 
+	are released to the “public domain” under [Creative Commons CC0 1.0 “No Rights Reserved”](https://creativecommons.org/publicdomain/zero/1.0/). 
+	No copyright has been applied to NEON data; any person may copy, modify, 
+	or distribute the data, for commercial or non-commercial purposes, without 
+	asking for permission. NEON data may still be subject to other laws or rights 
+	such as for privacy, and NEON makes no warranties about the data and disclaims 
+	all liability. When using or citing NEON data, no implication should be made 
+	about endorsement by NEON. In most countries, data and facts are not copyrightable. 
+	By putting NEON data into the public domain, we encourage broad use, particularly 
+	in scientific analyses and data aggregations. However, please be mindful of the 
+	following scholarly norms: NEON data should be used in a way that is mindful of 
+	the limitations of the data, using the documentation associated with the data 
+	packages as a guide. Please refer to https://www.neonscience.org/data-samples/guidelines-policies 
+	for detailed information on how to properly use and cite NEON data, as well as 
+	best practices for publishing research that uses NEON data.
   |||,
 }
