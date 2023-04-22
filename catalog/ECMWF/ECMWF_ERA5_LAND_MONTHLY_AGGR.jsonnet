@@ -67,16 +67,12 @@ local predecessor_url = catalog_subdir_url + predecessor_filename;
       11132.0,
     ],
     'eo:bands': [
-      if band.name in era5_land.flow_bands then
       {
-        name: band.name + '_sum',
+        name: if std.member(
+          era5_land.flow_bands, band.name
+          ) then band.name + '_sum' else band.name,
         description: band.description,
-        'gee:units': band.units
-      }
-      else {
-        name: band.name,
-        description: band.description,
-        'gee:units': band.units
+        [if std.objectHas(band, 'units') then 'gee:units']: band.units
       }
       for band in era5_land.bands
     ],
@@ -97,12 +93,12 @@ local predecessor_url = catalog_subdir_url + predecessor_filename;
               0.1,
             ],
             palette: [
-              '#FFFFFF',
-              '#00FFFF',
-              '#0080FF',
-              '#DA00FF',
-              '#FFA400',
-              '#FF0000',
+              'ffffff',
+              '00ffff',
+              '0080ff',
+              'da00ff',
+              'ffa400',
+              'ff0000',
             ],
             bands: [
               'total_precipitation_sum',

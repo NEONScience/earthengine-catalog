@@ -4,6 +4,7 @@ local subdir = 'NASA';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 
 // There is a custom public domain statement in gee:terms_of_use.
 local license = spdx.proprietary;
@@ -42,9 +43,9 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   license: license.id,
   links: ee.standardLinks(subdir, id),
   keywords: [
+    'cag',
     'climate',
     'cmip5',
-    'csu',
     'gddp',
     'geophysical',
     'nasa',
@@ -53,7 +54,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'temperature',
   ],
   providers: [
-    ee.producer_provider('NASA / CSU', 'https://cds.nccs.nasa.gov/nex-gddp/'),
+    ee.producer_provider('NASA /  Climate Analytics Group', 'https://www.nccs.nasa.gov/services/data-collections/land-based-products/nex-gddp'),
     ee.host_provider(self_ee_catalog_url),
   ],
   extent: ee.extent_global('1950-01-01T00:00:00Z', '2100-12-31T00:00:00Z'),
@@ -106,17 +107,17 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
           liquid and solid phases from all types of clouds (both large-scale
           and convective)
         |||,
-        'gee:units': 'kg/(m^2*s)',
+        'gee:units': units.rainfall_rate_kg_per_m2_per_s,
       },
       {
         name: 'tasmin',
         description: 'Daily mean of the daily-minimum near-surface air temperature',
-        'gee:units': 'K',
+        'gee:units': units.kelvin,
       },
       {
         name: 'tasmax',
         description: 'Daily mean of the daily-maximum near-surface air temperature',
-        'gee:units': 'K',
+        'gee:units': units.kelvin,
       },
     ],
     'gee:visualizations': [

@@ -34,7 +34,7 @@ local image_base_url = 'https://developers.google.com/earth-engine/datasets/imag
   catalog_url: self.catalog_base + 'catalog.json',
 
   sample_url(subdir, basename): image_base_url + subdir + '/' + basename + '_sample.png',
-  example_base_url: 'https://code.earthengine.google.com/?scriptPath=Examples:Datasets/',
+  example_base_url: 'https://code.earthengine.google.com/?scriptPath=Examples:Datasets',
 
   // Values for gee:type
   gee_type: {
@@ -51,6 +51,13 @@ local image_base_url = 'https://developers.google.com/earth-engine/datasets/imag
   ext_ver: self.ext_base + 'version/v1.0.0/schema.json',
 
   version_unknown: 'Unknown',
+
+  provider_type: {
+    host: 'host',
+    licensor: 'licensor',
+    processor: 'processor',
+    producer: 'producer',
+  },
 
   // MIME types
   // https://en.wikipedia.org/wiki/Media_type

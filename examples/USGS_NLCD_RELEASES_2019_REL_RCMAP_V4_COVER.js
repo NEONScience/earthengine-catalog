@@ -2,13 +2,13 @@
 var dataset = ee.ImageCollection('USGS/NLCD_RELEASES/2019_REL/RCMAP/V4/COVER');
 
 // Filter the collection to the 2016 product.
-var nlcd2016 = dataset.filter(ee.Filter.eq('system:index', '2016')).first();
+var rcmap2016 = dataset.filter(ee.Filter.eq('system:index', '2016')).first();
 
 // Each product has multiple bands for different rangeland categories.
-print('Bands:', nlcd2016.bandNames());
+print('Bands:', rcmap2016.bandNames());
 
 // Select the rangeland_annual_herbaceous band.
-var landcover = nlcd2016.select('rangeland_annual_herbaceous');
+var landcover = rcmap2016.select('rangeland_annual_herbaceous');
 
 var vis = {
   'palette': [

@@ -19,8 +19,6 @@ local successor_filename = successor_basename + '.json';
 
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 local catalog_subdir_url = ee_const.catalog_base + subdir + '/';
-local parent_url = catalog_subdir_url + 'catalog.json';
-local self_url = catalog_subdir_url + base_filename;
 local latest_url = catalog_subdir_url + latest_filename;
 local successor_url = catalog_subdir_url + successor_filename;
 
@@ -84,7 +82,7 @@ local successor_url = catalog_subdir_url + successor_filename;
   'gee:provider_ids': [
     'C194001222-LPDAAC_ECS',
   ],
-  extent: ee.extent_global('2002-07-04T00:00:00Z', null),
+  extent: ee.extent_global('2002-07-04T00:00:00Z', '2023-02-25T00:00:00Z'),
   summaries: template.summaries {
     platform: [
       'Aqua',

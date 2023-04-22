@@ -4,6 +4,7 @@ local subdir = 'OpenET';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 
 local license = spdx.cc_by_4_0;
 
@@ -63,7 +64,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
           Ensemble ET value, computed as the mean of the ensemble
           after filtering outliers using the median absolute deviation (mad)
         |||,
-        'gee:units': 'mm',
+        'gee:units': units.millimeter,
       },
       {
         name: 'et_ensemble_mad_min',
@@ -71,7 +72,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
            The minimum value in the ensemble range, after filtering for
            outliers using the median absolute deviation (mad)
         |||,
-        'gee:units': 'mm',
+        'gee:units': units.millimeter,
       },
       {
         name: 'et_ensemble_mad_max',
@@ -79,7 +80,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
            The maximum value in the ensemble range, after filtering for
            outliers using the median absolute deviation (mad)
         |||,
-        'gee:units': 'mm',
+        'gee:units': units.millimeter,
       },
       {
         name: 'et_ensemble_mad_count',
@@ -195,7 +196,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         description: |||
            The simple arithmetic mean (sam) of all six models in the OpenET model ensemble
         |||,
-        'gee:units': 'mm',
+        'gee:units': units.millimeter,
       },
     ],
     'gee:visualizations': [
@@ -215,26 +216,26 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
               1400.0,
             ],
             palette: [
-              '9E6212',
-              'AC7D1D',
-              'BA9829',
-              'C8B434',
-              'D6CF40',
-              'BED44B',
-              '9FCB51',
-              '80C256',
-              '61B95C',
-              '42B062',
-              '45B677',
-              '49BC8D',
-              '4DC2A2',
-              '51C8B8',
-              '55CECE',
-              '4DB4BA',
-              '459AA7',
-              '3D8094',
+              '9e6212',
+              'ac7d1d',
+              'ba9829',
+              'c8b434',
+              'd6cf40',
+              'bed44b',
+              '9fcb51',
+              '80c256',
+              '61b95c',
+              '42b062',
+              '45b677',
+              '49bc8d',
+              '4dc2a2',
+              '51c8b8',
+              '55cece',
+              '4db4ba',
+              '459aa7',
+              '3d8094',
               '356681',
-              '2D4C6E',
+              '2d4c6e',
             ],
             bands: [
               'et_ensemble_mad',

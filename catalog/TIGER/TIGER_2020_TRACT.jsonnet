@@ -4,6 +4,7 @@ local subdir = 'TIGER';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 
 local license = spdx.proprietary;
 
@@ -25,7 +26,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   description: |||
     The United States Census Bureau regularly releases
     a geodatabase named TIGER. This dataset contains the 2020 census
-    blocks, roughly equivalent to a city block. There are just over
+    tracts. Tract areas vary tremendously, but in urban areas are roughly
+    equivalent to a neighborhood. There are just over
     85000 polygon features covering the United States, the District
     of Columbia, Puerto Rico, and the
     [Island areas](https://www.census.gov/programs-surveys/decennial-census/decade/2020/planning-management/release/2020-island-areas-data-products.html).
@@ -35,7 +37,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   |||,
   license: license.id,
   links: ee.standardLinks(subdir, id) + [
-    ee.link.example(id, basename + '_FeatureView'),
+    ee.link.example(id, subdir, basename + '_FeatureView'),
   ],
   keywords: [
     'census',
@@ -57,13 +59,13 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         name: 'ALAND',
         description: 'Land Area (square meters)',
         type: ee_const.var_type.double,
-        units: 'm^2',
+        units: units.square_m,
       },
       {
         name: 'AWATER',
         description: 'Water Area (square meters)',
         type: ee_const.var_type.double,
-        units: 'm^2',
+        units: units.square_m,
       },
       {
         name: 'COUNTYFP',

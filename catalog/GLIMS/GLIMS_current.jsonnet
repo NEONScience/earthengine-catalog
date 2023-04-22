@@ -16,8 +16,6 @@ local license = spdx.proprietary;
 local basename = std.strReplace(id, '/', '_');
 local base_filename = basename + '.json';
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
-local catalog_subdir_url = ee_const.catalog_base + configs.subdir + '/';
-local self_url = catalog_subdir_url + base_filename;
 
 {
   stac_version: ee_const.stac_version,
@@ -53,7 +51,7 @@ local self_url = catalog_subdir_url + base_filename;
   |||,
   license: license.id,
   links: ee.standardLinks(subdir, id) + [
-    ee.link.example(id, basename + '_FeatureView'),
+    ee.link.example(id, subdir, basename + '_FeatureView'),
     ee.link.latest(config.latest_id, config.latest_url),
     ee.link.predecessor(config.predecessor_id, config.predecessor_url),
     {

@@ -4,6 +4,7 @@ local subdir = 'TOMS';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 
 local license = spdx.proprietary;
 
@@ -77,7 +78,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       {
         name: 'ozone',
         description: 'Total column ozone',
-        'gee:units': 'Dobson units',
+        'gee:units': units.dobson,
       },
     ],
     'gee:visualizations': [
@@ -97,7 +98,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
               500.0,
             ],
             palette: [
-              '1621A2',
+              'blue',
               'cyan',
               'green',
               'yellow',

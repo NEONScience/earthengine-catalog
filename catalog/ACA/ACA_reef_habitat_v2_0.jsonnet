@@ -8,10 +8,22 @@ local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
 
 local license = spdx.cc_by_4_0;
+local version = '2.0';
+
+local basename = std.strReplace(id, '/', '_');
+local latest_basename = std.strReplace(latest_id, '/', '_');
+local predecessor_basename = std.strReplace(predecessor_id, '/', '_');
+
+local base_filename = basename + '.json';
+local latest_filename = latest_basename + '.json';
+local predecessor_filename = predecessor_basename + '.json';
 
 local basename = std.strReplace(id, '/', '_');
 local base_filename = basename + '.json';
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
+local catalog_subdir_url = ee_const.catalog_base + subdir + '/';
+local latest_url = catalog_subdir_url + latest_filename;
+local predecessor_url = catalog_subdir_url + predecessor_filename;
 
 {
   stac_version: ee_const.stac_version,
@@ -27,7 +39,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'gee:type': ee_const.gee_type.image,
   description: |||
     The [Allen Coral Atlas](https://allencoralatlas.org/) dataset maps the geomorphic
-    zonation and benthic habitat for the world’s shallow coral reefs at 5 m pixel
+    zonation and benthic habitat for the world's shallow coral reefs at 5 m pixel
     resolution. Also included is a global reef extent product that maps additional
     reef areas unable to be explicitly included in the geomorphic and benthic mapping.
     The underlying satellite image data are temporal composites of [PlanetScope
@@ -54,7 +66,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     [Planet](https://www.planet.com/), the
     [University of Queensland](https://www.uq.edu.au/), and the
     [Coral Reef Alliance](https://coral.org/en/).
-    
+
     Scientific background publications:
 
     - Lyons, M. B., Roelfsema, C. M., Kennedy, E. V., Kovacs, E. M., Borrego-Acevedo, R., Markey, K., ... & Murray, N. J. (2020). Mapping the world's coral reefs using a global multiscale earth observation framework. Remote Sensing in Ecology and Conservation, 6(4), 557-568. [doi:10.1002/rse2.157](https://doi.org/10.1002/rse2.157)
@@ -80,7 +92,10 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     {
       rel: ee_const.rel.cite_as,
       href: 'https://doi.org/10.5281/zenodo.3833242',
-    },
+    }
+  ] + [
+    ee.link.latest(latest_id, latest_url),
+    ee.link.predecessor(predecessor_id, predecessor_url)
   ],
   keywords: [
     'coral',
@@ -318,5 +333,4 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   |||,
   'gee:terms_of_use': ee.gee_terms_of_use(license),
   'gee:user_uploaded': true,
-  'gee:skip_indexing': true,
 }

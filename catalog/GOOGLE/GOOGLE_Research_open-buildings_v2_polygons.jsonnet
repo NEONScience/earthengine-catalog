@@ -1,6 +1,7 @@
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 local versions = import 'versions.libsonnet';
 local version_table = import 'GOOGLE_Research_open-buildings_polygons.libsonnet';
 
@@ -25,7 +26,7 @@ local license = spdx.cc_by_4_0;
     This large-scale open dataset consists of outlines of buildings derived
     from high-resolution 50 cm satellite imagery. It contains 816M building
     detections in Africa, South Asia and Southeast Asia. The inference spanned
-    an area of 39.1M km².
+    an area of 39.1M km&#178;.
 
     For each building in this dataset we include the polygon describing its
     footprint on the ground, a confidence score indicating how sure we are that
@@ -47,7 +48,7 @@ local license = spdx.cc_by_4_0;
   license: license.id,
   links: ee.standardLinks(subdir, version_config.id) + [
     ee.link.example(
-      version_config.id, version_config.basename + '_FeatureView'),
+      version_config.id, subdir, version_config.basename + '_FeatureView'),
     ee.link.license(license.reference)
   ] + version_config.version_links,
   keywords: [
@@ -71,7 +72,7 @@ local license = spdx.cc_by_4_0;
         name: 'area_in_meters',
         description: 'Area in square meters of the polygon.',
         type: ee_const.var_type.double,
-        units: 'm^2',
+        units: units.square_m,
       },
       {
         name: 'confidence',

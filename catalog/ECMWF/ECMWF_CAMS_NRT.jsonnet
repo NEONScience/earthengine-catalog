@@ -4,15 +4,13 @@ local subdir = 'ECMWF';
 local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
+local units = import 'units.libsonnet';
 
 local license = spdx.proprietary;
 
 local basename = std.strReplace(id, '/', '_');
 local base_filename = basename + '.json';
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
-local catalog_subdir_url = ee_const.catalog_base + subdir + '/';
-local parent_url = catalog_subdir_url + 'catalog.json';
-local self_url = catalog_subdir_url + base_filename;
 
 {
   stac_version: ee_const.stac_version,
@@ -89,27 +87,27 @@ local self_url = catalog_subdir_url + base_filename;
       {
         name: 'particulate_matter_d_less_than_25_um_surface',
         description: 'Particulate matter d < 2.5 um',
-        'gee:units': 'kg m**-3',
+        'gee:units': units.density_si,
       },
       {
         name: 'total_column_nitrogen_dioxide_surface',
         description: 'Total column Nitrogen dioxide surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_sulphur_dioxide_surface',
         description: 'Total column Sulfur dioxide surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_carbon_monoxide_surface',
         description: 'Total column Carbon monoxide surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_formaldehyde_surface',
         description: 'Total column Formaldehyde surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'gems_total_column_ozone_surface',
@@ -162,12 +160,12 @@ local self_url = catalog_subdir_url + base_filename;
       {
         name: 'particulate_matter_d_less_than_1_um_surface',
         description: 'Particulate matter d < 1 um surface',
-        'gee:units': 'kg m**-3',
+        'gee:units': units.density_si,
       },
       {
         name: 'particulate_matter_d_less_than_10_um_surface',
         description: 'Particulate matter d < 10 um surface',
-        'gee:units': 'kg m**-3',
+        'gee:units': units.density_si,
       },
       {
         name: 'uv_biologically_effective_dose_surface',
@@ -177,32 +175,32 @@ local self_url = catalog_subdir_url + base_filename;
       {
         name: 'total_column__peroxyacetyl_nitrate_surface',
         description: 'Total column peroxyacetyl nitrate surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column__isoprene_surface',
         description: 'Total column isoprene surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_nitrogen_monoxide_surface',
         description: 'Total column nitrogen monoxide surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_hydrogen_peroxide_surface',
         description: 'Total column hydrogen peroxide surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_hydroxyl_radical_surface',
         description: 'Total column hydroxyl radical surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_methane_surface',
         description: 'Total column methane surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column__ethane_surface',
@@ -211,12 +209,12 @@ local self_url = catalog_subdir_url + base_filename;
       {
         name: 'total_column_propane_surface',
         description: 'Total column propane surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
       {
         name: 'total_column_nitric_acid_surface',
         description: 'Total column nitric acid surface',
-        'gee:units': 'kg m**-2',
+        'gee:units': units.area_density,
       },
     ],
     'gee:visualizations': [
@@ -236,17 +234,17 @@ local self_url = catalog_subdir_url + base_filename;
               3.582552,
             ],
             palette: [
-              '5E4FA2',
-              '3288BD',
-              '66C2A5',
-              'ABE0A4',
-              'E6F598',
-              'FFFFBF',
-              'FEE08B',
-              'FDAE61',
-              'F46D43',
-              'D53E4F',
-              '9E0142',
+              '5e4fa2',
+              '3288bd',
+              '66c2a5',
+              'abe0a4',
+              'e6f598',
+              'ffffbf',
+              'fee08b',
+              'fdae61',
+              'f46d43',
+              'd53e4f',
+              '9e0142',
             ],
             bands: [
               'total_aerosol_optical_depth_at_550nm_surface',

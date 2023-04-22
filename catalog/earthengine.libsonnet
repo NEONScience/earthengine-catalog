@@ -21,12 +21,21 @@ local ee_const = import 'earthengine_const.libsonnet';
     if condition then arr else [],
   orEmptyDict(condition, d):
     if condition then d else {},
+
   producer_provider(name, url):
-    { name: name, roles: ['licensor', 'producer'], url: url },
+    {
+      name: name,
+      roles: [ee_const.provider_type.licensor, ee_const.provider_type.producer],
+      url: url
+    },
   processor_provider(name, url):
-    { name: name, roles: ['processor'], url: url },
+    { name: name, roles: [ee_const.provider_type.processor], url: url },
   host_provider(ee_catalog_url):
-    { name: 'Google Earth Engine', roles: ['host'], url: ee_catalog_url },
+    {
+      name: 'Google Earth Engine',
+      roles: [ee_const.provider_type.host],
+      url: ee_catalog_url
+    },
 
   extent(xmin, ymin, xmax, ymax, start, end):: {
     spatial: { bbox: [[xmin, ymin, xmax, ymax]] },
@@ -69,10 +78,10 @@ local ee_const = import 'earthengine_const.libsonnet';
       href: ee_const.catalog_url,
       type: ee_const.media_type.stac,
     },
-    example(id, basename):: {
+    example(id, subdir, basename):: {
       title: 'Run the example for ' + id + ' in the Earth Engine Code Editor',
       rel: ee_const.rel.related,
-      href: ee_const.example_base_url + basename,
+      href: ee_const.example_base_url + '/' + subdir + '/' + basename,
       type: ee_const.media_type.html,
       code: ee_const.code_type.javascript,
     },
@@ -122,7 +131,7 @@ local ee_const = import 'earthengine_const.libsonnet';
       $.link.self_link(self_url),
       $.link.parent(parent_url),
       $.link.root(),
-      $.link.example(dataset_id, basename),
+      $.link.example(dataset_id, subdir, basename),
       $.link.preview(subdir, basename),
       $.link.terms_of_use(self_ee_catalog_url),
     ],

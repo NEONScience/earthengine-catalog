@@ -1,5 +1,6 @@
+local units = import 'units.libsonnet';
+
 {
-  
   bands: [
     {
       name: 'Count_Day',
@@ -214,49 +215,49 @@
     {
       name: 'LST_Day',
       description: 'Average Daytime Land Surface Temperature',
-      'gee:units': 'Kelvin',
+      'gee:units': units.kelvin,
       'gee:scale': 0.02,
     },
     {
       name: 'LST_Night',
       description: 'Average Nighttime Land Surface Temperature',
-      'gee:units': 'Kelvin',
+      'gee:units': units.kelvin,
       'gee:scale': 0.02,
     },
     {
       name: 'LST_Day_err',
       description: 'Root-mean-square-error Daytime Land Surface Temperature',
-      'gee:units': 'Kelvin',
+      'gee:units': units.kelvin,
       'gee:scale': 0.04,
     },
     {
       name: 'LST_Night_err',
       description: 'Average Nighttime Land Surface Temperature',
-      'gee:units': 'Kelvin',
+      'gee:units': units.kelvin,
       'gee:scale': 0.04,
     },
     {
       name: 'Day_view_angle',
       description: 'Average Daytime View Zenith Angle',
-      'gee:units': 'Degrees',
+      'gee:units': units.degree,
       'gee:offset': -65.0,
     },
     {
       name: 'Night_view_angle',
       description: 'Average Nighttime View Zenith Angle',
-      'gee:units': 'Degrees',
+      'gee:units': units.degree,
       'gee:offset': -65.0,
     },
     {
       name: 'Day_view_time',
       description: 'Average Daytime View Time (UTC)',
-      'gee:units': 'Hours',
+      'gee:units': units.hour,
       'gee:scale': 0.2,
     },
     {
       name: 'Night_view_time',
       description: 'Average Nighttime View Time (UTC)',
-      'gee:units': 'Hours',
+      'gee:units': units.hour,
       'gee:scale': 0.2,
     },
     {
@@ -328,13 +329,13 @@
     {
       name: 'View_Angle',
       description: 'MODIS view zenith angle',
-      'gee:units': 'Degrees',
+      'gee:units': units.degree,
       'gee:offset': -65.0,
     },
     {
       name: 'Percent_land_in_grid',
       description: 'Percent of Land Detections in Grid Cell',
-      'gee:units': 'Percent',
+      'gee:units': units.percent,
     },
   ],
   summaries: {
