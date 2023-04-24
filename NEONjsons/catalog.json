@@ -1,6 +1,6 @@
 {
    "description": "The [Earth Engine](https://earthengine.google.com/) Public Data Catalog.\n\nSee also:\n\n- [HTML version of the catalog](https://developers.google.com/earth-engine/datasets/catalog)\n- [STAC Browser version](https://radiantearth.github.io/stac-browser/#/external/storage.googleapis.com/earthengine-stac/catalog/catalog.json)\n",
-   "id": "NEON/AOP",
+   "id": "NEON",
    "links": [
       {
          "href": "https://storage.googleapis.com/earthengine-stac/catalog/catalog.json",
@@ -13,18 +13,36 @@
          "type": "application/json"
       },
       {
-         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/AOP/catalog.json",
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/catalog.json",
          "rel": "self",
          "type": "application/json"
       },
       {
-         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/AOP/HYPERSPECTRAL.json",
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/NEON_CHM.json",
          "rel": "child",
-         "title": "HYPERSPECTRAL",
+         "title": "NEON_CHM",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/NEON_DEM.json",
+         "rel": "child",
+         "title": "NEON_DEM",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/NEON_RGB.json",
+         "rel": "child",
+         "title": "NEON_RGB",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/NEON_SDR.json",
+         "rel": "child",
+         "title": "NEON_SDR",
          "type": "application/json"
       }
    ],
    "stac_version": "1.0.0",
-   "title": "NEON/AOP",
+   "title": "NEON",
    "type": "Catalog"
 }
