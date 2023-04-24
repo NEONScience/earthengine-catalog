@@ -1,0 +1,30 @@
+{
+   "description": "The [Earth Engine](https://earthengine.google.com/) Public Data Catalog.\n\nSee also:\n\n- [HTML version of the catalog](https://developers.google.com/earth-engine/datasets/catalog)\n- [STAC Browser version](https://radiantearth.github.io/stac-browser/#/external/storage.googleapis.com/earthengine-stac/catalog/catalog.json)\n",
+   "id": "NEON/AOP",
+   "links": [
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/catalog.json",
+         "rel": "root",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/catalog.json",
+         "rel": "parent",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/AOP/catalog.json",
+         "rel": "self",
+         "type": "application/json"
+      },
+      {
+         "href": "https://storage.googleapis.com/earthengine-stac/catalog/NEON/AOP/HYPERSPECTRAL.json",
+         "rel": "child",
+         "title": "HYPERSPECTRAL",
+         "type": "application/json"
+      }
+   ],
+   "stac_version": "1.0.0",
+   "title": "NEON/AOP",
+   "type": "Catalog"
+}
