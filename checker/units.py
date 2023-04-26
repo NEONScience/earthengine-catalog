@@ -6,20 +6,24 @@ https://github.com/google/earthengine-catalog/blob/main/catalog/units.libsonnet
 """
 
 # TODO(schwehr): Load this from units.libsonnet
-UNITS = {
+UNITS = frozenset({
     '%',
     '1 (area fraction)',
     '1 (dimensionless)',
     '1 (mass fraction)',
     '1 (mol fraction)',
+    '1 (unspecified fraction)',
     '1 (volume fraction)',
     'Dobson',
     'GHz',
     'Gg',
+    'J/kg',
     'J/m^2',
     'K',
     'M (nautical mile)',
+    'MW',
     'Pa',
+    'W/m^2',
     'a',
     'cm',
     'count',
@@ -40,6 +44,7 @@ UNITS = {
     'kt',
     'm',
     'm/s',
+    'm/s^2',
     'm^2',
     'mbar',
     'min',
@@ -50,4 +55,4 @@ UNITS = {
     'rad',
     '&deg;C',
     '&micro;m',
-}
+})
