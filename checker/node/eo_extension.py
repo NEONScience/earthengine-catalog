@@ -182,7 +182,9 @@ UNITS = units.UNITS.union({
     '% (kg / kg)',
     '(kg/m^3)/(m/s)',
     '1.0e15 molec cm-2',
+    'centimeter',
     'Coefficient of Variation',
+    'degrees',
     'DN',
     'DU',
     'Equivalent gauges per 2.5 degree box',
@@ -216,12 +218,14 @@ UNITS = units.UNITS.union({
     'kg*C/m^2/8-day',
     'kg/m/s',
     'kg/m^2/8day',
+    'kilometer',
     'm of water equivalent',
     'mW cm-2 &mu;m-1 sr-1',
     'm^2 s-2',
     'm^2/m^3',
     'meq/100g',
     'meter/year',
+    'meter',
     'mg m-3',
     'mg/m^3',
     'min. into half hour',
@@ -238,6 +242,7 @@ UNITS = units.UNITS.union({
     'seconds',
     'sr-1',
     'ug m-3',
+    'unitless',
 })
 
 
