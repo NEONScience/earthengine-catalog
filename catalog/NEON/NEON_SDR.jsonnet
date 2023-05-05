@@ -3780,7 +3780,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 },
 	 {
 	  name:'B442',
-	  'gee:units':'date yyyy-mm-dd',
+	  'gee:units':'Flight Date',
 	  description:'Acquisition Date, YYYYMMDD'
 	 },
     ],

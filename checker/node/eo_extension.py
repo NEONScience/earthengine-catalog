@@ -184,6 +184,7 @@ UNITS = units.UNITS.union({
     '1.0e15 molec cm-2',
     'centimeter',
     'Coefficient of Variation',
+    'Flight Date',
     'degrees',
     'DN',
     'DU',
