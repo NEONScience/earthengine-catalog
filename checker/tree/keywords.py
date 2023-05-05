@@ -115,7 +115,6 @@ EXCEPTIONS = frozenset({
     'health',
     'human',
     'hyperion',
-    'hyperspectral',
     'igbp',
     'impervious',
     'infrastructure',
