@@ -238,6 +238,7 @@ UNITS = units.UNITS.union({
     'ms',
     'nanoWatts/cm2/sr',
     'occurrence',
+    'percent',
     'ppm',
     'seconds',
     'sr-1',
