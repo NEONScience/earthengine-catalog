@@ -1,8 +1,8 @@
-var dataset = ee.ImageCollection("projects/neon-nonprod-earthengine/assets/DP3-30006-001")
-  .filterDate('2021-01-01', '2021-12-31')
-  .filterMetadata('NEON_SITE', 'equals', 'MCRA');
+var sdr = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30006-001")
+  .filterDate('2019-01-01', '2019-12-31')
+  .filterMetadata('NEON_SITE', 'equals', 'HARV');
   
-var rgb = dataset.select(['B053', 'B035', 'B019']);
-var rgbVis = {min: 103, max: 1160, gamma: 1.3};
-Map.setCenter(-122.154, 44.268, 14);
-Map.addLayer(rgb, rgbVis, 'AOP Surface Directional Reflectance RGB');
+var sdr_rgb = sdr.select(['B053', 'B035', 'B019']);
+var rgbVis = {min: 103, max: 1160, gamma: 1};
+Map.setCenter(-72.20, 42.50, 11);
+Map.addLayer(sdr_rgb, rgbVis, 'HARV 2019 Surface Directional Reflectance RGB');

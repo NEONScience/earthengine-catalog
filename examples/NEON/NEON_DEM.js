@@ -1,8 +1,14 @@
-var dsm = ee.ImageCollection("projects/neon-nonprod-earthengine/assets/DP3-30024-001")
+var dsm = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30024-001")
   .filterDate('2021-01-01', '2021-12-31')
-  .filterMetadata('NEON_SITE', 'equals', 'MCRA')
+  .filterMetadata('NEON_SITE', 'equals', 'SOAP')
   .filterMetadata('PRODUCT_TYPE', 'equals', 'DSM');
+
+var dtm = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30024-001")
+  .filterDate('2021-01-01', '2021-12-31')
+  .filterMetadata('NEON_SITE', 'equals', 'SOAP')
+  .filterMetadata('PRODUCT_TYPE', 'equals', 'DTM');
   
-var dsmVis = {min: 800, max: 1600, gamma: 1.0};
-Map.setCenter(-122.154, 44.268, 14);
-Map.addLayer(dsm, dsmVis, 'MCRA 2021 Digital Surface Model');
+var demVis = {min: 600, max: 2300, gamma: 0.5};
+Map.setCenter(-119.25, 37.06, 12);
+Map.addLayer(dsm, demVis, 'SOAP 2021 Digital Surface Model');
+Map.addLayer(dtm, demVis, 'SOAP 2021 Digital Terrain Model');
