@@ -23,14 +23,14 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'gee:type': ee_const.gee_type.image_collection,
   description: |||
 	Orthorectified surface directional reflectance (0-1 unitless, scaled by 10000) 
-	computed from one of three NEON Imaging Spectrometer (NIS) units, AVIRIS-NG sensors built by JPL. 
-	This is a hyperspectral dataset containing 426 bands spanning wavelengths from 380 nm to 2510 nm; 
-	wavelengths between 1340-1445nm and 1790-1955nm are set to -100; these are water vapor 
-	absorption bands without valid values. Spatial resolution is 1m, spectral resolution is ~5nm. 
+	computed from one of three NEON Imaging Spectrometer (NIS) units, AVIRIS-NG sensors built by NASA's Jet Propulsion Lab (JPL). 
+	This hyperspectral dataset contains 426 bands spanning wavelengths from ~380 nm to 2510 nm. 
+	Wavelengths between 1340-1445nm and 1790-1955nm are set to -100; these are water vapor 
+	absorption bands without valid values. Spatial resolution is 1m and spectral resolution is ~5nm. 
 	A Bidirectional Reflectance Distribution Function (BRDF) correction has not been applied. 
 	Flight lines over a given site are mosaicked using the highest quality cloud
 	conditions and closest proximity to nadir. Data are calibrated and atmospherically corrected, and include QA 
-	and ancillary bands, comprising of inputs and outputs to/from Atmospheric & Topographic Correction (ATCOR), 
+	and ancillary bands comprising of inputs to and outputs from the Atmospheric & Topographic Correction (ATCOR), 
 	weather quality information, and the acquisition date; see the "Bands" tab for more detailed information. 
 	Documentation: [NEON DP3.30006.001 Quick Start Guide](https://data.neonscience.org/api/v0/documents/quick-start-guides/NEON.QSG.DP3.30006.001v1?inline=true&fallback=html)
   |||,
@@ -52,27 +52,27 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'gee:schema': [
       {
         name: 'AOP_VISIT_NUMBER',
-        description: 'Unique visit number to the NEON site, typically AOP flies each site three out of every four years',
+        description: 'Unique visit number to the NEON site',
         type: ee_const.var_type.string,
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'Year the hypserspectral data was collected, typically AOP flies each site three out of every four years',
+        description: 'Year the hypserspectral data was collected',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON ecoclimatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'NEON site code; See https://www.neonscience.org/field-sites',
+        description: 'NEON four-digit site code. See https://www.neonscience.org/field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_ID',
-        description: 'NEON data product identification code (ID), in the form DPL.PRNUM.REV, where DPL = Data Product Level, PRNUM = Product Number, and REV = Revision, e.g. "DP3.30006.001"',
+        description: 'NEON data product identification code (ID) in the form DPL.PRNUM.REV, where DPL = Data Product Level, PRNUM = Product Number, and REV = Revision, e.g. "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
