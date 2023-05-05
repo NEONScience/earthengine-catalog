@@ -122,7 +122,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 {
 	  name:'CHM',
 	  description:'Canopy Height Model',
-	  'gee:units':'meters',
+	  'gee:units':'meter',
 	 },
     ],
     'gee:visualizations': [

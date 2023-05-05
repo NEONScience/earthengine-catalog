@@ -114,7 +114,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 {
 	  name:'DEM',
 	  description:'Digital Elevation Model',
-	  'gee:units':'meters',
+	  'gee:units':'meter',
 	 },
     ],
     'gee:visualizations': [
