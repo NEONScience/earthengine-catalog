@@ -3708,7 +3708,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 },
 	 {
 	  name:'B433',
-	  'gee:units':'meters',
+	  'gee:units':'meter',
 	  description:'Path length between sensor and surface'
 	 },
 	 {
@@ -3723,17 +3723,17 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 },
 	 {
 	  name:'B436',
-	  'gee:units':'meters',
+	  'gee:units':'meter',
 	  description:'Smooth Surface Elevation used as input to ATCOR'
 	 },
 	 {
 	  name:'B437',
-	  'gee:units':'kilometers',
+	  'gee:units':'kilometer',
 	  description:'Visibility Index Map - sea level values of visibility index / total optical thickeness'
 	 },
 	 {
 	  name:'B438',
-	  'gee:units':'centimeters',
+	  'gee:units':'centimeter',
 	  description:'Water Vapor Column - (cm)*1000 ground-to-space used in ATCOR'
 	 },
 	 {
