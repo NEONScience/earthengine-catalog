@@ -3546,7 +3546,18 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	 },
 	 {
 	  name:'B429',
-	  'gee:units': 'Flag: 1=shadow; 0=no shadow',
+      'gee:classes': [
+              {
+                value: 0,
+                color: 'ffffff',
+                description: 'no shadow',
+              },
+              {
+                value: 1,
+                color: '4d4d4d',
+                description: 'shadow',
+              },
+      ],
 	  description:'Cast Shadow mask used as input to ATCOR'
 	 },
 	 {
