@@ -115,17 +115,17 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     ],
     'eo:bands': [
 	 {
-	  name:'B001',
+	  name:'B1',
 	  description:'Red',
 	  'gee:units':'unitless',
 	 },
 	 {
-	  name:'B002',
+	  name:'B2',
 	  description:'Green',
 	  'gee:units':'unitless',
 	 },
 	 {
-	  name:'B003',
+	  name:'B3',
 	  description:'Blue',
 	  'gee:units':'unitless',
 	 },
