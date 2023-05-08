@@ -55,32 +55,32 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'gee:schema': [
       {
         name: 'AOP_VISIT_NUMBER',
-        description: 'Unique visit number to the NEON site, typically AOP flies each site three out of every four years',
+        description: 'Unique visit number to the NEON site',
         type: ee_const.var_type.string,
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'Year the data was collected, typically AOP flies each site three out of every four years',
+        description: 'Year the data were collected',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON ecoclimatic domain code, "D01" to "D20"; See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON ecoclimatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'NEON site code; See https://www.neonscience.org/field-sites',
+        description: 'NEON four-digit site code. See https://www.neonscience.org/field-sites',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_ID',
-        description: 'NEON data product identification code (ID), in the form DPL.PRNUM.REV, e.g. "DP3.30010.001"',
+        description: 'NEON data product identification code: "DP3.30010.001"',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_URL',
-        description: 'NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
+        description: 'NEON data product url: "https://data.neonscience.org/data-products/DP3.30010.001"',
         type: ee_const.var_type.string,
       },
 	  {
@@ -100,12 +100,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
       {
         name: 'RELEASE_TAG',
-        description: 'NEON Release Tag; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
-        type: ee_const.var_type.string,
-      },
-      {
-        name: 'PROCESSING_SOFTWARE',
-        description: 'Processing system and software version',
+        description: 'NEON Release Tag. See https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
         type: ee_const.var_type.string,
       },
     ],
@@ -167,19 +162,20 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30010.001',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
-	exception of data related to rare, threatened, or endangered (RTE) 
-	species, are released to the “public domain” under Creative Commons 
-	CC0 1.0 “No Rights Reserved” (https://creativecommons.org/publicdomain/zero/1.0/). 
-	No copyright has been applied to NEON data; any person may copy, modify, or 
-	distribute the data, for commercial or non-commercial purposes, 
-	without asking for permission. NEON data may still be subject to 
-	other laws or rights such as for privacy, and NEON makes no warranties 
-	about the data and disclaims all liability.  When using or citing NEON 
-	data, no implication should be made about endorsement by NEON. Please 
-	refer to https://www.neonscience.org/data-samples/data-policies-citation 
-	for detailed information on how to properly cite NEON data.
-	In most countries, data and facts are not copyrightable. By putting NEON data into the public domain, we encourage broad use, particularly in scientific analyses and data aggregations. However, please be mindful of the following scholarly norms:
-	NEON data should be used in a way that is mindful of the limitations of the data, using the documentation associated with the data packages as a guide. Unlike most scientific data, NEON data is not associated with individual authors; rather, the ‘author’ of data produced by the Observatory is NEON itself. 
-	Attributions and citations should be made to NEON for any use of the data.
+	exception of data related to rare, threatened, or endangered (RTE) species, 
+	are released to the public domain under [Creative Commons CC0 1.0 "No Rights Reserved"](https://creativecommons.org/publicdomain/zero/1.0/). 
+	No copyright has been applied to NEON data; any person may copy, modify, 
+	or distribute the data, for commercial or non-commercial purposes, without 
+	asking for permission. NEON data may still be subject to other laws or rights 
+	such as for privacy, and NEON makes no warranties about the data and disclaims 
+	all liability. When using or citing NEON data, no implication should be made 
+	about endorsement by NEON. In most countries, data and facts are not copyrightable. 
+	By putting NEON data into the public domain, we encourage broad use, particularly 
+	in scientific analyses and data aggregations. However, please be mindful of the 
+	following scholarly norms: NEON data should be used in a way that is mindful of 
+	the limitations of the data, using the documentation associated with the data 
+	packages as a guide. Please refer to https://www.neonscience.org/data-samples/guidelines-policies 
+	for detailed information on how to properly use and cite NEON data, as well as 
+	best practices for publishing research that uses NEON data.
   |||,
 }

@@ -57,12 +57,12 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },     
       {
         name: 'FLIGHT_YEAR',
-        description: 'Year the hypserspectral data was collected',
+        description: 'Year the data were collected',
         type: ee_const.var_type.string,
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON ecoclimatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON eco-climatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
@@ -72,12 +72,12 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
       {
         name: 'NEON_DATA_PROD_ID',
-        description: 'NEON data product identification code (ID) in the form DPL.PRNUM.REV, where DPL = Data Product Level, PRNUM = Product Number, and REV = Revision, e.g. "DP3.30006.001"',
+        description: 'NEON data product identification code: "DP3.30006.001"',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_URL',
-        description: 'NEON data product url, including the unique identifier of the NEON data product, e.g. "https://data.neonscience.org/data-products/DP3.30006.001"',
+        description: 'NEON data product url: "https://data.neonscience.org/data-products/DP3.30006.001"',
         type: ee_const.var_type.string,
       },
 	  {
@@ -104,16 +104,6 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         name: 'RELEASE_TAG',
         description: 'NEON Release Tag; see https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
         type: ee_const.var_type.string,
-      },
-      {
-        name: 'PROCESSING_SOFTWARE',
-        description: 'Processing system and software version',
-        type: ee_const.var_type.string,
-      },
-      {
-        name: 'PRODUCT_CREATION_TIME',
-        description: 'Date and time when NEON L3 reflectance h5 dataset was created',
-        type: ee_const.var_type.double,
       },
     ],
 	gsd: [
@@ -3817,7 +3807,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
 	exception of data related to rare, threatened, or endangered (RTE) species, 
-	are released to the “public domain” under [Creative Commons CC0 1.0 “No Rights Reserved”](https://creativecommons.org/publicdomain/zero/1.0/). 
+	are released to the public domain under [Creative Commons CC0 1.0 "No Rights Reserved"](https://creativecommons.org/publicdomain/zero/1.0/). 
 	No copyright has been applied to NEON data; any person may copy, modify, 
 	or distribute the data, for commercial or non-commercial purposes, without 
 	asking for permission. NEON data may still be subject to other laws or rights 
