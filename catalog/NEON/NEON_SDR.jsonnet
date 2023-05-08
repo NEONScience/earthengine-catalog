@@ -3776,22 +3776,22 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     ],
     'gee:visualizations': [
       {
-        display_name: 'RGB',
+        display_name: 'SDR',
         lookat: {
-          lat: 39.8283,
-          lon: -98.5795,
-          zoom: 9, 
+          lat: 37.06,
+          lon: -119.25,
+          zoom: 12, 
         },
         image_visualization: {
           band_vis: {
             min: [
-              1000.0,
+              100.0,
             ],
             max: [
-              14000.0,
+              2400.0,
             ],
             gamma: [
-              2.5,
+              0.8,
             ],
             bands: [
               'B053',

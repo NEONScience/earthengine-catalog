@@ -134,25 +134,25 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       {
         display_name: 'RGB',
         lookat: {
-          lat: 39.8283,
-          lon: -98.5795,
-          zoom: 9, 
+          lat: 45.75,
+          lon: -122.32,
+          zoom: 12, 
         },
         image_visualization: {
           band_vis: {
             min: [
-              1000.0,
+              0,
             ],
             max: [
-              14000.0,
+              255,
             ],
             gamma: [
               2.5,
             ],
             bands: [
-              'B001',
-              'B002',
-              'B003',
+              'B1',
+              'B2',
+              'B3',
             ],
           },
         },

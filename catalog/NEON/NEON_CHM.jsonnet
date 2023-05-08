@@ -124,9 +124,9 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       {
         display_name: 'CHM',
         lookat: {
-          lat: 39.8283,
-          lon: -98.5795,
-          zoom: 9, 
+          lat: 37.06,
+          lon: -119.25,
+          zoom: 12, 
         },
         image_visualization: {
           band_vis: {
@@ -134,10 +134,10 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
               0.0,
             ],
             max: [
-              100.0,
+              50.0,
             ],
             gamma: [
-              2.5,
+              0.5,
             ],
             bands: [
               'CHM',
