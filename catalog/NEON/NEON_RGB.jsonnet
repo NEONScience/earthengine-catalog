@@ -5,7 +5,7 @@ local ee_const = import 'earthengine_const.libsonnet';
 local ee = import 'earthengine.libsonnet';
 local spdx = import 'spdx.libsonnet';
 
-local license = spdx.proprietary;
+local license = spdx.cc0_1_0;
 
 local basename = std.strReplace(id, '/', '_');
 local base_filename = basename + '.json';
@@ -50,7 +50,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     ee.producer_provider('NEON', 'https://www.neonscience.org/'),
     ee.host_provider(self_ee_catalog_url),
   ],
-  extent: ee.extent(-158, 16, -66, 73,'2013-01-01T00:00:00Z',null),
+  extent: ee.extent(-170, 16, -66, 73,'2013-01-01T00:00:00Z',null),
   summaries: {
     'gee:schema': [
       {
@@ -65,7 +65,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON ecoclimatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON eco-climatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
         type: ee_const.var_type.string,
       },
       {
