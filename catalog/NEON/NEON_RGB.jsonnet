@@ -105,7 +105,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
     ],
 	gsd: [
-      1.0,
+      0.1,
     ],
     platform: [
       'NEON',
