@@ -47,7 +47,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     ee.producer_provider('NEON', 'https://www.neonscience.org/'),
     ee.host_provider(self_ee_catalog_url),
   ],
-  extent: ee.extent_global('2013-01-01T00:00:00Z', '2023-01-01T00:00:00Z'),
+  extent: ee.extent(-158, 16, -66, 73,'2013-01-01T00:00:00Z',null),
   summaries: {
     'gee:schema': [
       {
