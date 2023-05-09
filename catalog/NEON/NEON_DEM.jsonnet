@@ -151,7 +151,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	all liability. When using or citing NEON data, no implication should be made 
 	about endorsement by NEON. In most countries, data and facts are not copyrightable. 
 	By putting NEON data into the public domain, we encourage broad use, particularly 
-	in scientific analyses and data aggregations. However, please be mindful of the 
+	in scientific analyses and data aggregations. However, please be aware of the 
 	following scholarly norms: NEON data should be used in a way that is mindful of 
 	the limitations of the data, using the documentation associated with the data 
 	packages as a guide. Please refer to https://www.neonscience.org/data-samples/guidelines-policies 
