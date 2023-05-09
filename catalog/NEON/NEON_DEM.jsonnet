@@ -129,7 +129,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
               3000.0,
             ],
             gamma: [
-              0.5,
+              1,
             ],
             bands: [
               'DEM',
