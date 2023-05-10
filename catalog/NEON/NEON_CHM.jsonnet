@@ -49,6 +49,7 @@ local units = import 'units.libsonnet';
     'forest',
     'lidar',
     'neon',
+    'vegetation',
   ],
   providers: [
     ee.producer_provider('NEON', 'https://www.neonscience.org/'),
