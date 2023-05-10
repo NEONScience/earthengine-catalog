@@ -127,18 +127,9 @@ local units = import 'units.libsonnet';
         lookat: {lon: -119.25, lat: 37.06, zoom: 12},
         image_visualization: {
           band_vis: {
-            min: [
-              0.0,
-            ],
-            max: [
-              50.0,
-            ],
-            gamma: [
-              1,
-            ],
-            bands: [
-              'CHM',
-            ],
+            min: [0],
+            max: [50],
+            bands: ['CHM'],
           },
         },
       },
