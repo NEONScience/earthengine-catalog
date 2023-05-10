@@ -109,12 +109,8 @@ local units = import 'units.libsonnet';
         type: ee_const.var_type.string,
       },
     ],
-	gsd: [
-      1.0,
-    ],
-    platform: [
-      'NEON',
-    ],
+    gsd: [1],
+    platform: ['NEON'],
     instruments: [
       'Optech Galaxy Prime','Optech Gemini','Riegl Q780'
     ],
