@@ -85,7 +85,7 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'NEON_DATA_PROD_URL',
-        description: 'NEON data product url: "https://data.neonscience.org/data-products/DP3.30015.001"',
+        description: 'NEON data product url. Always set to: [https://data.neonscience.org/data-products/DP3.30015.001](https://data.neonscience.org/data-products/DP3.30015.001)',
         type: ee_const.var_type.string,
       },
 	  {
