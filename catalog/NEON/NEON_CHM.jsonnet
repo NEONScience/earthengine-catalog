@@ -95,12 +95,12 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'SENSOR_NAME',
-        description: 'Make and model of the lidar sensor: "Optech Galaxy Prime","Optech Gemini","Riegl Q780"',
+        description: 'Make and model of the lidar sensor: "Optech Galaxy Prime", "Optech Gemini", "Riegl Q780"',
         type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_SERIAL',
-        description: 'Serial number of the lidar sensor: "12SEN311","11SEN287","5060445","220855"',
+        description: 'Serial number of the lidar sensor: "12SEN311", "11SEN287", "5060445", "220855"',
         type: ee_const.var_type.string,
       },
       {
