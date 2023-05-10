@@ -44,7 +44,9 @@ local units = import 'units.libsonnet';
   links: ee.standardLinks(subdir, id),
   keywords: [
     'airborne',
+    'canopy',
     'ecology',
+    'forest',
     'lidar',
     'neon',
   ],
