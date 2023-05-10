@@ -135,7 +135,7 @@ local units = import 'units.libsonnet';
       },
     ],
   },
-  'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30015.001',
+  'sci:citation': 'See [NEON citation guidelines](https://www.neonscience.org/data-samples/guidelines-policies/citing)',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
 	exception of data related to rare, threatened, or endangered (RTE) species, 
