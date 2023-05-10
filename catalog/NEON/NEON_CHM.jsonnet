@@ -111,9 +111,7 @@ local units = import 'units.libsonnet';
     ],
     gsd: [1],
     platform: ['NEON'],
-    instruments: [
-      'Optech Galaxy Prime','Optech Gemini','Riegl Q780'
-    ],
+    instruments: ['Optech Galaxy Prime', 'Optech Gemini', 'Riegl Q780'],
     'eo:bands': [
 	 {
 	  name:'CHM',
