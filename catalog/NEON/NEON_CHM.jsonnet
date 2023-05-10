@@ -55,7 +55,7 @@ local units = import 'units.libsonnet';
     ee.producer_provider('NEON', 'https://www.neonscience.org/'),
     ee.host_provider(self_ee_catalog_url),
   ],
-  extent: ee.extent(-170, 16, -66, 73,'2013-01-01T00:00:00Z',null),
+  extent: ee.extent(-170, 16, -66, 73, '2013-01-01T00:00:00Z', null),
   summaries: {
     'gee:schema': [
       {
