@@ -150,7 +150,7 @@ local units = import 'units.libsonnet';
 	in scientific analyses and data aggregations. However, please be aware of the 
 	following scholarly norms: NEON data should be used in a way that is mindful of 
 	the limitations of the data, using the documentation associated with the data 
-	packages as a guide. Please refer to https://www.neonscience.org/data-samples/guidelines-policies 
+	packages as a guide. Please refer to [NEON Data Guidelines and Policies](https://www.neonscience.org/data-samples/guidelines-policies)
 	for detailed information on how to properly use and cite NEON data, as well as 
 	best practices for publishing research that uses NEON data.
   |||,
