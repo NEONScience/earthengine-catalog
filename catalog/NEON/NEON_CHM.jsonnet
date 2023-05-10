@@ -70,7 +70,7 @@ local units = import 'units.libsonnet';
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON eco-climatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON eco-climatic domain code, "D01" to "D20". See [https://www.neonscience.org/field-sites/about-field-sites](https://www.neonscience.org/field-sites/about-field-sites)',
         type: ee_const.var_type.string,
       },
       {
@@ -105,7 +105,7 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'RELEASE_TAG',
-        description: 'NEON Release Tag. See https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
+        description: 'NEON Release Tag. See [https://www.neonscience.org/data-samples/data-management/data-revisions-releases](https://www.neonscience.org/data-samples/data-management/data-revisions-releases)',
         type: ee_const.var_type.string,
       },
     ],
