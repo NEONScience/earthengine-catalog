@@ -123,7 +123,7 @@ local units = import 'units.libsonnet';
     ],
     'gee:visualizations': [
       {
-        display_name: 'CHM',
+        display_name: 'Canopy Height Model (CHM)',
         lookat: {
           lat: 37.06,
           lon: -119.25,
