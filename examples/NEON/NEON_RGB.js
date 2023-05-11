@@ -1,4 +1,4 @@
-var camera = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30010-001")
+var camera = ee.ImageCollection('projects/neon-prod-earthengine/assets/DP3-30010-001')
   .filterDate('2021-01-01', '2021-12-31')
   .filterMetadata('NEON_SITE', 'equals', 'ABBY');
   
