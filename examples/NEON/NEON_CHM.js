@@ -1,4 +1,4 @@
-var chm = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30015-001")
+var chm = ee.ImageCollection('projects/neon-prod-earthengine/assets/DP3-30015-001')
   .filterDate('2021-01-01', '2021-12-31')
   .filterMetadata('NEON_SITE', 'equals', 'SOAP');
   
