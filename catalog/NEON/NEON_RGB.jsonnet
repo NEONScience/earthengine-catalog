@@ -110,7 +110,7 @@ local units = import 'units.libsonnet';
     ],
     gsd: [0.1],
     platform: ['NEON'],
-    instruments: ['Phase One iXM-RS150F'],
+    instruments: ['Phase One D8900', 'Phase One IQ180', 'Phase One iX-RS 1000', 'Phase One iXM-RS 150F'],
     'eo:bands': [
 	 {
 	  name:'B1',
