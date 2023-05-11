@@ -1,4 +1,4 @@
-var sdr = ee.ImageCollection("projects/neon-prod-earthengine/assets/DP3-30006-001")
+var sdr = ee.ImageCollection('projects/neon-prod-earthengine/assets/DP3-30006-001')
   .filterDate('2019-01-01', '2019-12-31')
   .filterMetadata('NEON_SITE', 'equals', 'HARV');
   
