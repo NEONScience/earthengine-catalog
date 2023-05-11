@@ -94,12 +94,12 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'SENSOR_NAME',
-        description: 'Make and model of the camera sensor, eg. "Phase One iXM-RS150F"',
+        description: 'Make and model of the camera sensor: "Phase One D8900", "Phase One IQ180", "Phase One iX-RS 1000", "Phase One iXM-RS 150F"',
         type: ee_const.var_type.string,
       },
       {
         name: 'SENSOR_SERIAL',
-        description: 'Serial number of the camera sensor, eg. "MM010175"',
+        description: 'Serial number of the camera sensor: "EH021537", "EH021656", "EH021554", "FT010031", "MM010175", "MM010176", "YC030119", "YC030129"',
         type: ee_const.var_type.string,
       },
       {
