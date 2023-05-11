@@ -11,6 +11,8 @@ local basename = std.strReplace(id, '/', '_');
 local base_filename = basename + '.json';
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 
+local units = import 'units.libsonnet';
+
 {
   stac_version: ee_const.stac_version,
   type: ee_const.stac_type.collection,
@@ -106,15 +108,9 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
         type: ee_const.var_type.string,
       },
     ],
-	gsd: [
-      0.1,
-    ],
-    platform: [
-      'NEON',
-    ],
-    instruments: [
-      'Phase One iXM-RS150F',
-    ],
+    gsd: [0.1],
+    platform: ['NEON'],
+    instruments: ['Phase One iXM-RS150F'],
     'eo:bands': [
 	 {
 	  name:'B1',
