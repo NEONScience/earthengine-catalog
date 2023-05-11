@@ -80,7 +80,7 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'NEON_DATA_PROD_ID',
-        description: 'NEON data product identification code, "DP3.30015.001"',
+        description: 'NEON data product identification code. Always set to: "DP3.30015.001"',
         type: ee_const.var_type.string,
       },
       {
