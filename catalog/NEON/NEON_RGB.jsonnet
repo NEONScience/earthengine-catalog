@@ -44,13 +44,15 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   keywords: [
     'airborne',
     'ecology',
+    'forest',
     'neon',
+    'vegetation',
   ],
   providers: [
     ee.producer_provider('NEON', 'https://www.neonscience.org/'),
     ee.host_provider(self_ee_catalog_url),
   ],
-  extent: ee.extent(-170, 16, -66, 73,'2013-01-01T00:00:00Z',null),
+  extent: ee.extent(-170, 16, -66, 73, '2013-01-01T00:00:00Z', null),
   summaries: {
     'gee:schema': [
       {
@@ -65,22 +67,22 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },  
       {
         name: 'NEON_DOMAIN',
-        description: 'NEON eco-climatic domain code, "D01" to "D20". See https://www.neonscience.org/field-sites/about-field-sites',
+        description: 'NEON eco-climatic domain code, "D01" to "D20". See [https://www.neonscience.org/field-sites/about-field-sites](https://www.neonscience.org/field-sites/about-field-sites)',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_SITE',
-        description: 'NEON four-digit site code. See https://www.neonscience.org/field-sites',
+        description: 'NEON four-digit site code. See [https://www.neonscience.org/field-sites](https://www.neonscience.org/field-sites)',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_ID',
-        description: 'NEON data product identification code: "DP3.30010.001"',
+        description: 'NEON data product identification code. Always set to: "DP3.30010.001"',
         type: ee_const.var_type.string,
       },
       {
         name: 'NEON_DATA_PROD_URL',
-        description: 'NEON data product url: "https://data.neonscience.org/data-products/DP3.30010.001"',
+        description: 'NEON data product url. Always set to [https://data.neonscience.org/data-products/DP3.30010.001](https://data.neonscience.org/data-products/DP3.30010.001)',
         type: ee_const.var_type.string,
       },
 	  {
@@ -100,7 +102,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
       {
         name: 'RELEASE_TAG',
-        description: 'NEON Release Tag. See https://www.neonscience.org/data-samples/data-management/data-revisions-releases',
+        description: 'NEON Release Tag. See [https://www.neonscience.org/data-samples/data-management/data-revisions-releases](https://www.neonscience.org/data-samples/data-management/data-revisions-releases)',
         type: ee_const.var_type.string,
       },
     ],
@@ -133,22 +135,11 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
     'gee:visualizations': [
       {
         display_name: 'RGB',
-        lookat: {
-          lat: 45.75,
-          lon: -122.32,
-          zoom: 12, 
-        },
+        lookat: {lon: -122.32, lat: 45.75, zoom: 12},
         image_visualization: {
           band_vis: {
-            min: [
-              0,
-            ],
-            max: [
-              255,
-            ],
-            gamma: [
-              2.5,
-            ],
+            min: [0],
+            max: [255],
             bands: [
               'B1',
               'B2',
@@ -159,7 +150,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
       },
     ],
   },
-  'sci:citation': 'See https://data.neonscience.org/data-products/DP3.30010.001',
+  'sci:citation': 'See [NEON citation guidelines](https://www.neonscience.org/data-samples/guidelines-policies/citing)',
   'gee:terms_of_use': |||
 	All data collected by NEON and provided as data products, with the 
 	exception of data related to rare, threatened, or endangered (RTE) species, 
@@ -174,7 +165,7 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
 	in scientific analyses and data aggregations. However, please be aware of the 
 	following scholarly norms: NEON data should be used in a way that is mindful of 
 	the limitations of the data, using the documentation associated with the data 
-	packages as a guide. Please refer to https://www.neonscience.org/data-samples/guidelines-policies 
+	packages as a guide. Please refer to [NEON Data Guidelines and Policies](https://www.neonscience.org/data-samples/guidelines-policies)
 	for detailed information on how to properly use and cite NEON data, as well as 
 	best practices for publishing research that uses NEON data.
   |||,
