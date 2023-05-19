@@ -113,17 +113,17 @@ local units = import 'units.libsonnet';
     instruments: ['Phase One D8900', 'Phase One IQ180', 'Phase One iX-RS 1000', 'Phase One iXM-RS 150F'],
     'eo:bands': [
 	 {
-	  name:'B1',
+	  name:'R',
 	  description:'Red',
 	  'gee:units': units.dn,
 	 },
 	 {
-	  name:'B2',
+	  name:'G',
 	  description:'Green',
 	  'gee:units': units.dn,
 	 },
 	 {
-	  name:'B3',
+	  name:'B',
 	  description:'Blue',
 	  'gee:units': units.dn,
 	 },
