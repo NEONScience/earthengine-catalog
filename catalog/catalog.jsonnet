@@ -63,6 +63,7 @@ local self_url = base_url + base_filename;
     ee.link.child_catalog('LANDFIRE', base_url),
     ee.link.child_catalog('LANDSAT', base_url),
     ee.link.child_catalog('LARSE', base_url),
+    ee.link.child_catalog('Latvia', base_url),
     ee.link.child_catalog('MERIT', base_url),
     ee.link.child_catalog('MODIS', base_url),
     ee.link.child_catalog('NASA', base_url),
@@ -107,6 +108,7 @@ local self_url = base_url + base_filename;
     ee.link.child_catalog('WWF', base_url),
     ee.link.child_catalog('WorldPop', base_url),
     ee.link.child_catalog('YALE', base_url),
+    ee.link.child_catalog('ngis-cat', base_url),
     ee.link.child_catalog('planet-nicfi', base_url),
   ],
 }
