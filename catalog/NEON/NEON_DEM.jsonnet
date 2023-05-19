@@ -27,8 +27,8 @@ local units = import 'units.libsonnet';
 	Digital models of the surface (DSM) and terrain (DTM) derived from NEON LiDAR data.
 	DSM: Surface features (topographic information with vegetation and man-made structures present). 
 	DTM: Bare earth elevation (topographic information with vegetation and man-made structures removed).
-	Both images are given in meters above mean sea level and mosaicked onto a spatially uniform grid at 
-	1 m spatial resolution. See [NEON Data Product DP3.30024.001](https://data.neonscience.org/data-products/DP3.30024.001) for more details.
+	Images are given in meters above mean sea level and mosaicked onto a spatially uniform grid at 
+	1 m resolution. See [NEON Data Product DP3.30024.001](https://data.neonscience.org/data-products/DP3.30024.001) for more details.
 	Citation: Please use the appropriate citation(s) in your publications; see Terms of Use for more info.
 	Documentation: [NEON DP3.30024.001 Quick Start Guide](https://data.neonscience.org/api/v0/documents/quick-start-guides/NEON.QSG.DP3.30024.001v1?inline=true&fallback=html)
   |||,
