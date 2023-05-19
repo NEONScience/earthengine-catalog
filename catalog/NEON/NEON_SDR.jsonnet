@@ -3525,12 +3525,12 @@ local units = import 'units.libsonnet';
 	 },
 	 {
 	  name:'B427',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'Aerosol Optical Depth'
 	 },
 	 {
 	  name:'B428',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'Aspect used as input to ATCOR'
 	 },
 	 {
@@ -3703,47 +3703,47 @@ local units = import 'units.libsonnet';
 	 },
 	 {
 	  name:'B432',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'Illumination Factor used as input to ATCOR'
 	 },
 	 {
 	  name:'B433',
-	  'gee:units':'meter',
+	  'gee:units': units.meter,
 	  description:'Path Length between sensor and surface'
 	 },
 	 {
 	  name:'B434',
-	  'gee:units':'percent',
+	  'gee:units': units.percent,
 	  description:'Sky View Factor used as input to ATCOR'
 	 },
 	 {
 	  name:'B435',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'Slope used as input to ATCOR'
 	 },
 	 {
 	  name:'B436',
-	  'gee:units':'meter',
+	  'gee:units': units.meter,
 	  description:'Smooth Surface Elevation used as input to ATCOR'
 	 },
 	 {
 	  name:'B437',
-	  'gee:units':'km',
+	  'gee:units': units.kilometer,
 	  description:'Visibility Index Map - sea level values of visibility index / total optical thickeness'
 	 },
 	 {
 	  name:'B438',
-	  'gee:units':'cm',
+	  'gee:units': units.centimeter,
 	  description:'Water Vapor Column - (cm)*1000 ground-to-space used in ATCOR'
 	 },
 	 {
 	  name:'B439',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'to-sensor Azimuth Angle'
 	 },
 	 {
 	  name:'B440',
-	  'gee:units':'degree',
+	  'gee:units': units.degree,
 	  description:'to-sensor Zenith Angle'
 	 },
 	 {
