@@ -115,17 +115,17 @@ local units = import 'units.libsonnet';
 	 {
 	  name:'B1',
 	  description:'Red',
-	  'gee:units': units.DN,
+	  'gee:units': units.dn,
 	 },
 	 {
 	  name:'B2',
 	  description:'Green',
-	  'gee:units': units.DN,
+	  'gee:units': units.dn,
 	 },
 	 {
 	  name:'B3',
 	  description:'Blue',
-	  'gee:units': units.DN,
+	  'gee:units': units.dn,
 	 },
     ],
     'gee:visualizations': [
