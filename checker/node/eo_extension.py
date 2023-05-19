@@ -184,7 +184,6 @@ UNITS = units.UNITS.union({
     '1.0e15 molec cm-2',
     'Coefficient of Variation',
     'Flight Date',
-    'DU',
     'Equivalent gauges per 2.5 degree box',
     'J/m^2/day',
     'Julian Day',
