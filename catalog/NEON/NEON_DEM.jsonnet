@@ -108,7 +108,7 @@ local units = import 'units.libsonnet';
 	 {
 	  name:'DEM',
 	  description:'Digital Elevation Model',
-	  'gee:units':'meter',
+	  'gee:units': units.meter,
 	 },
     ],
     'gee:visualizations': [
