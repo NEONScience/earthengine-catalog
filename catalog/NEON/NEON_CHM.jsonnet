@@ -116,7 +116,7 @@ local units = import 'units.libsonnet';
 	 {
 	  name:'CHM',
 	  description:'Canopy Height Model',
-	  'gee:units':'meter',
+	  'gee:units': units.meter,
 	 },
     ],
     'gee:visualizations': [
