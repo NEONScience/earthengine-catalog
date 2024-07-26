@@ -109,7 +109,7 @@ local units = import 'units.libsonnet';
         name: 'NEON_DATA_PROD_URL',
         description: 'NEON data product url. Always set to: ' +
         '[https://data.neonscience.org/data-products/DP3.30024.001]' +
-        '(https://data.neonscience.org/data-products/DP3.30024.001)',
+        '(https://data.neonscience.org/data-products/DP3.30024.001).',
         type: ee_const.var_type.string,
       },
       {
@@ -119,7 +119,7 @@ local units = import 'units.libsonnet';
       },
       {
         name: 'SENSOR_SERIAL',
-        description: 'Serial number of the lidar sensor: "11SEN287", "12SEN311", "5060445", "220855"',
+        description: 'Serial number of the lidar sensor: "11SEN287", "12SEN311", "5060445", "220855".',
         type: ee_const.var_type.string,
       },
       {
