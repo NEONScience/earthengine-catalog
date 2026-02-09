@@ -1,4 +1,5 @@
 local id = 'projects/pml_evapotranspiration/PML/OUTPUT/PML_V22a';
+local predecessor_id = 'CAS/IGSNRR/PML/V2_v018';
 local subdir = 'pml_evapotranspiration';
 
 local ee_const = import 'earthengine_const.libsonnet';
@@ -9,12 +10,13 @@ local units = import 'units.libsonnet';
 local license = spdx.cc_by_4_0;
 
 local basename = std.strReplace(id, '/', '_');
+local predecessor_basename = std.strReplace(predecessor_id, '/', '_');
 local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
+local catalog_base_url = ee_const.catalog_base;
 
 {
   stac_version: ee_const.stac_version,
   type: ee_const.stac_type.collection,
-  'gee:status': 'beta',
   stac_extensions: [
     ee_const.ext_eo,
     ee_const.ext_sci,
@@ -43,6 +45,8 @@ local self_ee_catalog_url = ee_const.ee_catalog_url + basename;
   license: license.id,
   links: ee.standardLinks(subdir, id) + [
     ee.link.license(license.reference),
+    ee.link.predecessor(
+      predecessor_id, catalog_base_url + 'CAS/' + predecessor_basename + '.json'),
   ],
   'gee:categories': ['plant-productivity', 'water-vapor'],
   keywords: [
