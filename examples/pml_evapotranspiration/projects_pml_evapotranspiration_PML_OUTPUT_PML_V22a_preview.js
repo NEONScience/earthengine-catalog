@@ -1,25 +1,33 @@
 var dataset = ee.ImageCollection('projects/pml_evapotranspiration/PML/OUTPUT/PML_V22a');
 
+// Convert 8-day averages to annual estimate with 0.01 scale factor
+var image = dataset.filterDate('2024-01-01', '2024-12-31')
+    .select('ET')
+    .mean()
+    .multiply(365)
+    .multiply(0.01);
+    
+// Final unit: mm yr-1
 var visualization = {
+  bands: ['ET'],
   min: 0.0,
-  max: 9.0,
+  max: 1600, 
   palette: [
-    'a50026', 'd73027', 'f46d43', 'fdae61', 'fee08b', 'ffffbf',
-    'd9ef8b', 'a6d96a', '66bd63', '1a9850', '006837',
+    "#A02323", "#C80000", "#FF0000", "#FF6E00", "#FFAA00", "#FFE132", 
+    "#FFFFC8", "#D2F5FF", "#A0D2FF", "#00BFFF", "#1E90FF", "#4169E1", 
+    "#0000CD", "#000096"
   ]
 };
 
-var gray = 150;
-var background = ee.Image.rgb(gray, gray, gray).visualize({min: 0, max: 255});
-
-// Calculate mean GPP and apply the 0.01 scale factor
-var image = dataset.select('GPP')
-    .filterDate('2001-01-01', '2023-12-31')
-    .mean()
-    .multiply(0.01);
+Map.setCenter(0.0, 15.0, 2);
 
 Map.addLayer(
-    image, visualization, 'PML_V2.2a Gross Primary Product (GPP)');
+    image, visualization, 'PML_V2.2a Evapotranspiration (ET)');
+
+    
+var white = 255; 
+var background = ee.Image.rgb(white, white, white).visualize({min: 0, max: 255});
+
 
 // Visualize the image and layer it over the gray background
 var visualizedImage = image.visualize(visualization);

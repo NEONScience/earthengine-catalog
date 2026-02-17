@@ -27,8 +27,8 @@ local catalog_base_url = ee_const.catalog_base;
   version: '2.2a',
   'gee:type': ee_const.gee_type.image_collection,
   description: |||
-    The dataset is produced by the Large Scale Hydrology Lab, which specializes in advancing global and regional water cycle research 
-    through big data analytics and advanced hydrological modeling. 
+    The dataset is produced by the Large Scale Hydrology Lab, which specializes in advancing global and 
+    regional water cycle research by synthesizing multi-source Earth observations with process-based modeling. 
 
     The PML-V2.2a product provides 500m 8-day resolution global terrestrial evapotranspiration (ET) 
     and gross primary production (GPP) from 2000 to 2024. Driven by MSWEP and MSWX, this version 
@@ -39,8 +39,9 @@ local catalog_base_url = ee_const.catalog_base;
     and reliable basin-scale water-balance performance (NSE: 0.89–0.91). This MODIS-based 
     record is optimized for high-resolution near-present monitoring.
 
-    This dataset is part of the broader PML-V2.2 suite. For the long-term 43-year consolidated 
-    record (PML-V2.2b/c at 0.1° with different remote sensing forcing), please visit the [TPDC data repository](https://doi.org/10.11888/Terre.tpdc.303314).
+    This dataset is part of the broader PML-V2.2 suite. For the long-term and consolidated record 
+    (1982-near present, PML-V2.2a/b/c at 0.1° resolution with different remote sensing forcings), 
+    please visit the [TPDC data repository](https://doi.org/10.11888/Terre.tpdc.303314).
   |||,
   license: license.id,
   links: ee.standardLinks(subdir, id) + [
@@ -56,7 +57,7 @@ local catalog_base_url = ee_const.catalog_base;
     //'water-carbon',
   ],
   providers: [
-    ee.producer_provider('Large Scale Hydrology Lab', 'https://scholar.google.com/citations?user=t5iGFeAAAAAJ&hl=en'),
+    ee.producer_provider('Large Scale Hydrology Lab', 'https://zhang-hydrolab.github.io/'),
     ee.host_provider(self_ee_catalog_url),
   ],
   extent: ee.extent(-180.0, -60.0, 180.0, 90.0, '2000-03-05T00:00:00Z', null),
@@ -96,9 +97,8 @@ local catalog_base_url = ee_const.catalog_base;
       { 
         name: 'PET', 
         description: |||
-          Potential evapotranspiration (PET). Calculated using the Shuttleworth-simplified 
-          version of the Penman equation, which provides estimates of evaporation 
-          from water bodies, snow, and ice.
+          Potential evapotranspiration (PET) estimated using the Shuttleworth-simplified 
+          Penman equation.
         |||, 
         'gee:units': units.millimeter_per_day,
         'gee:scale': 0.01
@@ -106,9 +106,8 @@ local catalog_base_url = ee_const.catalog_base;
       { 
         name: 'Ew', 
         description: |||
-          Evaporation from water bodies, snow, and ice. Calculated using the
-          Penman equation, which is considered a good estimate of actual
-          evaporation for these surfaces.
+          Evaporation from water bodies, snow, and ice, estimated using the
+          Penman equation with unlimited water supply.
         |||, 
         'gee:units': units.millimeter_per_day,
         'gee:scale': 0.01
