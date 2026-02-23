@@ -64,9 +64,10 @@ local units = import 'units.libsonnet';
     //   type: ee_const.media_type.html,
     // },
   ],
-  'gee:categories': ['elevation-topography'],
+  'gee:categories': [''],
   keywords: [
     'airborne',
+    'canopy',
     'foliar',
     'forest',
     'hyperspectral',
@@ -168,7 +169,6 @@ local units = import 'units.libsonnet';
         description: 'Canopy Nitrogen Model Uncertainty',
         'gee:units': units.percent,
       },
-    ],
      {
       name: 'Needle_Classification',
       description: 'Classification result for needle vs. non-needle model',
@@ -201,6 +201,7 @@ local units = import 'units.libsonnet';
          },
        ],
      },
+     ],
     'gee:visualizations': [
       {
         display_name: 'Canopy Nitrogen Content',
